@@ -22,136 +22,253 @@
 
     <p class="Text1">Wie löse ich Matheaufgaben?</p>
 		<p class="Text1">Quadratische Funktionen</p> 
+
+    <p class = "Aufgabe" ><span style = "background-color:white;">Was stimmt für die Parabeln?</span></p>
         
 <!--//Aufgabe 1-->
 
   <pre><p class="Aufgabe"><strong>Aufgabe 1
 
-α = 40° und a = 2,5 cm. Wie groß ist c? </strong></p>
-<img src="Aufgabe1.jpg" align="middle" >  
+y = f(x) = x<sup>2</sup>    </strong>
+<img id ="A1" src="Aufgabe1.jpg" align="middle" style="display:none; padding-top:1em; padding-bottom:1em"> <button  id = "L1" onclick="window.open('QFunkt_Aufgabe3.html');" style="display:none;">Lösung</button>
+<button id ="oben" onclick="Schalter('oben')">nach oben geöffnet</button> <button id ="unten" onclick="Schalter('unten')" >nach unten geöffnet</button> </p></pre> 
 
-<button  onclick="window.open('Trigo_Aufgabe1.html');" >Lösung</button></pre>
+<script>
+function Schalter(buttonId) { 
+                                                
+                          if (buttonId==="oben") {alert("Richtig"); document.getElementById("oben").disabled= true;document.getElementById("unten").disabled= true;
+                          document.getElementById("A1").style.display="inline"; document.getElementById("L1").style="display:inline;"}
+                                            
 
+                           
+                          else if (buttonId ==="unten") {alert("Leider falsch. Nach oben ist richtig.");            
+                          document.getElementById("oben").disabled= true;document.getElementById("unten").disabled= true;
+                          document.getElementById("A1").style.display="inline"; document.getElementById("L1").style="display:inline;"}
+
+                             }
+
+                          </script>
 <!--//Aufgabe 2-->
 
-  <pre><p class ="Aufgabe" ><strong>Aufgabe 2
+    <pre><p class="Aufgabe"><strong>Aufgabe 2
 
-α = 55° und c = 7 cm. Wie groß ist a?      </strong>
-
-<img src="Aufgabe1.jpg" align="middle"> 
-
-a = <input type="text" id="Eintrag2" maxlength="3" size="1" style= background-color:yellow ></input> cm <button id="Pruef2" onclick="Aufgabe2()">Prüfen</button></p></pre>
- 
-                      <script>
+y = -x<sup>2</sup>    </strong>
+<img id ="A2" src="Aufgabe2.jpg" style="display:none; padding-top:1em; padding-bottom:1em">
+<button id ="oben2" onclick="Schalter2('oben2')">nach oben geöffnet</button> <button id ="unten2" onclick="Schalter2('unten2')" >nach unten geöffnet</button> 
+<p id="T2" class ="Aufgabe" style ="display:none">x   -2     2     S(0|0)
+y    4   <input type="text" id="Eintrag2" maxlength="2" size="1" style= background-color:yellow ></input>          <button id="Pruef2" onclick="Aufgabe2()">Prüfen</button></p></pre> 
+<script>
                         function Aufgabe2() { 
                                                 
-                          if (Eintrag2.value=="5,7") {alert("Richtig"); document.getElementById("Pruef2").disabled= true;
+                          if (Eintrag2.value=="-4") {alert("Richtig"); document.getElementById("Pruef2").disabled= true;
                           }  
                            
-                          else if (Eintrag2.value!=="5,7" && Eintrag2.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag2").value="5,7"; window.open('Trigo_Aufgabe2.html');           
+                          else if (Eintrag2.value!=="-4" && Eintrag2.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag2").value="-4"; window.open('QFunkt_Aufgabe2.html');           
                           document.getElementById("Pruef2").disabled= true;}
                                
                           else if (Eintrag2.value=="") {alert("Bitte eine Eingabe machen")}}
                          
                       </script>
-                      
+
+<script>
+function Schalter2(buttonId){
+                                                
+                          if (buttonId==="unten2") {alert("Richtig"); document.getElementById("unten2").disabled= true;document.getElementById("oben2").disabled= true;
+                          document.getElementById("T2").style.display="inline";document.getElementById("A2").style.display="inline";}
+                                                                        
+                          else if (buttonId ==="oben2") {alert("Leider falsch. Nach unten geöffnet ist richtig.");            
+                          document.getElementById("oben2").disabled= true;document.getElementById("unten2").disabled= true;
+                          document.getElementById("T2").style.display="inline";document.getElementById("A2").style.display="inline";}
+
+                          }                                            
+                          
+                                                
+                        
+                         
+                      </script>
 
         <!--//Aufgabe 3-->                  
 
   <pre><p class="Aufgabe"><strong>Aufgabe 3
 
-β = 44° und a = 3,5 cm. Wie groß ist c?  </strong></p>
-<img src="Aufgabe1.jpg" align="middle" >  
+y = 2x<sup>2</sup>    </strong>
+<img id ="A3" src="Aufgabe3.jpg" align ="middle" style="display:none; padding-top:1em; padding-bottom:1em"> <button  id = "L3" onclick="window.open('QFunkt_Aufgabe3.html');" style="display:none;">Lösung</button>
+<button id ="ostauch" onclick="Schalter3('ostauch')">nach oben geöffnet und gestaucht</button> 
+<button id ="ustauch" onclick="Schalter3('ustauch')" >nach unten geöffnet und gestaucht</button> 
+<button id ="ostreck" onclick="Schalter3('ostreck')">nach oben geöffnet und gestreckt</button> 
+<button id ="ustreck" onclick="Schalter3('ustreck')" >nach unten geöffnet und gestreckt</button></p></pre> 
 
-<button  onclick="window.open('Trigo_Aufgabe3.html');" >Lösung</button></pre>
+<script>
+function Schalter3(buttonId) { 
+                                                
+                          if (buttonId==="ostreck") {alert("Richtig"); document.getElementById("ostreck").disabled= true;document.getElementById("ustreck").disabled= true;
+                          document.getElementById("ostauch").disabled= true;document.getElementById("ustauch").disabled= true;
+                          document.getElementById("A3").style.display="inline";document.getElementById("L3").style.display="inline";
+                         }                     
+
+                           
+                          else if (buttonId ==="ostauch" || buttonId ==="ustauch" || buttonId === "ustreck") {alert("Leider falsch. Nach oben geöffnet und gestreckt sit richtig.");            
+                          document.getElementById("ostreck").disabled= true;document.getElementById("ustreck").disabled= true;
+                          document.getElementById("ostauch").disabled= true;document.getElementById("ustauch").disabled= true;
+                          document.getElementById("A3").style.display="inline";document.getElementById("L3").style.display="inline"; }
+
+                             }
+
+                          </script>
 
 
 <!--//Aufgabe 4-->
 
-  <pre><p class ="Aufgabe" ><strong>Aufgabe 4
+  <pre><p class="Aufgabe"><strong>Aufgabe 4
 
-Wie groß ist α, wenn c = 7 cm und b = 4,2 cm?     </strong>
-
-<img src="Aufgabe1.jpg" align="middle"> 
-
-α = <input type="text" id="Eintrag4" maxlength="4" size="1" style= background-color:yellow ></input> ° <button id="Pruef4" onclick="Aufgabe4()">Prüfen</button></p></pre>
- 
-                      <script>
+y = -2x<sup>2</sup>    </strong>
+<img id ="A4" src="Aufgabe4.jpg" style="display:none; padding-top:1em; padding-bottom:1em">
+<button id ="ostauch4" onclick="Schalter4('ostauch4')">nach oben geöffnet und gestaucht</button> 
+<button id ="ustauch4" onclick="Schalter4('ustauch4')" >nach unten geöffnet und gestaucht</button> 
+<button id ="ostreck4" onclick="Schalter4('ostreck4')">nach oben geöffnet und gestreckt</button> 
+<button id ="ustreck4" onclick="Schalter4('ustreck4')" >nach unten geöffnet und gestreckt</button>
+<p id="T4" class ="Aufgabe" style ="display:none">x   -1     2     S(0|<input type="text" id="Eintrag4" maxlength="1" size="1" style= background-color:yellow ></input>) <button id="Pruef4" onclick="Aufgabe4()">Prüfen</button>
+y   -2    -8</p></pre>  
+<script>
                         function Aufgabe4() { 
                                                 
-                          if (Eintrag4.value=="53,1") {alert("Richtig"); document.getElementById("Pruef4").disabled= true;
+                          if (Eintrag4.value=="0") {alert("Richtig"); document.getElementById("Pruef4").disabled= true;
                           }  
                            
-                          else if (Eintrag4.value!=="53,1" && Eintrag4.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag4").value="53,1"; window.open('Trigo_Aufgabe4.html');           
+                          else if (Eintrag4.value!=="0" && Eintrag4.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag4").value="0"; window.open('QFunkt_Aufgabe4.html');           
                           document.getElementById("Pruef4").disabled= true;}
                                
                           else if (Eintrag4.value=="") {alert("Bitte eine Eingabe machen")}}
                          
                       </script>
+ 
+<script>
+function Schalter4(buttonId){
+                                                
+                          if (buttonId==="ustreck4") {alert("Richtig"); document.getElementById("ustreck4").disabled= true;document.getElementById("ustreck4").disabled= true;
+                          document.getElementById("ostauch4").disabled= true;document.getElementById("ustauch4").disabled= true;
+                          document.getElementById("A4").style.display="inline";document.getElementById("T4").style.display="inline"
+                         }                     
 
+                           
+                          else if (buttonId ==="ostauch4" || buttonId ==="ustauch4" || buttonId === "ostreck4") {alert("Leider falsch. Nach unten geöffnet und gestreckt ist richtig.");            
+                          document.getElementById("ostreck4").disabled= true;document.getElementById("ustreck4").disabled= true;
+                          document.getElementById("ostauch4").disabled= true;document.getElementById("ustauch4").disabled= true;
+                          document.getElementById("A4").style.display="inline";document.getElementById("T4").style.display="inline" }
+
+
+                          }                                            
+                          
+                                                
+                        
+                         
+                      </script>
  <!--//Aufgabe 5-->  
 
   <pre><p class="Aufgabe"><strong>Aufgabe 5
 
-Wie groß sind die restlichen Seiten, 
-wenn α = 35° und c = 7 cm?   </strong></p>  
-<img src="Aufgabe1.jpg" align="middle"> 
+y = 0,5x<sup>2</sup>    </strong>
+<img id ="A5" src="Aufgabe5.jpg" align ="middle" style="display:none; padding-top:1em; padding-bottom:1em"> <button  id = "L5" onclick="window.open('QFunkt_Aufgabe5.html');" style="display:none;">Lösung</button>
+<button id ="ostauch5" onclick="Schalter5('ostauch5')">nach oben geöffnet und gestaucht</button> 
+<button id ="ustauch5" onclick="Schalter5('ustauch5')" >nach unten geöffnet und gestaucht</button> 
+<button id ="ostreck5" onclick="Schalter5('ostreck5')">nach oben geöffnet und gestreckt</button> 
+<button id ="ustreck5" onclick="Schalter5('ustreck5')" >nach unten geöffnet und gestreckt</button></p></pre> 
 
-<button  onclick="window.open('Trigo_Aufgabe5.html');">Lösung</button></pre>
+<script>
+function Schalter5(buttonId) { 
+                                                
+                          if (buttonId==="ostauch5") {alert("Richtig"); document.getElementById("ostreck5").disabled= true;document.getElementById("ustreck5").disabled= true;
+                          document.getElementById("ostauch5").disabled= true;document.getElementById("ustauch5").disabled= true;
+                          document.getElementById("A5").style.display="inline";document.getElementById("L5").style.display="inline";
+                         }                     
+
+                           
+                          else if (buttonId ==="ostreck5" || buttonId ==="ustauch5" || buttonId === "ustreck5") {alert("Leider falsch. Nach oben geöffnet und gestaucht ist richtig.");            
+                          document.getElementById("ostreck5").disabled= true;document.getElementById("ustreck5").disabled= true;
+                          document.getElementById("ostauch5").disabled= true;document.getElementById("ustauch5").disabled= true;
+                          document.getElementById("A5").style.display="inline";document.getElementById("L5").style.display="inline"; }
+
+                             }
+
+                          </script>
+
 
 <!--//Aufgabe 6-->
 
-  <pre><p class ="Aufgabe" ><strong>Aufgabe 6
+ <pre><p class="Aufgabe"><strong>Aufgabe 6
 
-Wie groß sind die restlichen Seiten, 
-wenn β = 78° und b = 17 cm? </strong>  
-
-<img src="Aufgabe1.jpg" align="middle"> 
-
-c = <input type="text" id="Eintrag6" maxlength="4" size="1" style= background-color:yellow ></input> cm <button id="Pruef6" onclick="Aufgabe6()">Prüfen</button>    </p></pre>
- 
-                      <script>
+y = -0,5x<sup>2</sup>    </strong>
+<img id ="A6" src="Aufgabe6.jpg" style="display:none; padding-top:1em; padding-bottom:1em">
+<button id ="ostauch6" onclick="Schalter6('ostauch6')">nach oben geöffnet und gestaucht</button> 
+<button id ="ustauch6" onclick="Schalter6('ustauch6')" >nach unten geöffnet und gestaucht</button> 
+<button id ="ostreck6" onclick="Schalter6('ostreck6')">nach oben geöffnet und gestreckt</button> 
+<button id ="ustreck6" onclick="Schalter6('ustreck6')" >nach unten geöffnet und gestreckt</button>
+<p id="T6" class ="Aufgabe" style ="display:none">x   -1     2     S(0|0)
+y   -2   <input type="text" id="Eintrag6" maxlength="2" size="1" style= background-color:yellow ></input>        <button id="Pruef6" onclick="Aufgabe6()">Prüfen</button></p></pre>  
+<script>
                         function Aufgabe6() { 
                                                 
-                          if (Eintrag6.value=="17,4") {alert("Richtig"); document.getElementById("Pruef6").disabled= true;
+                          if (Eintrag6.value=="-2") {alert("Richtig"); document.getElementById("Pruef6").disabled= true;
                           }  
                            
-                          else if (Eintrag6.value!=="17,4" && Eintrag6.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag6").value="17,4"; window.open('Trigo_Aufgabe6.html');           
+                          else if (Eintrag6.value!=="-2" && Eintrag6.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag6").value="-2"; window.open('QFunkt_Aufgabe6.html');           
                           document.getElementById("Pruef6").disabled= true;}
                                
                           else if (Eintrag6.value=="") {alert("Bitte eine Eingabe machen")}}
                          
                       </script>
+ 
+<script>function Schalter6(buttonId){
+                                                
+                          if (buttonId==="ustauch6") {alert("Richtig"); document.getElementById("ustreck6").disabled= true;document.getElementById("ostreck6").disabled= true;
+                          document.getElementById("ostauch6").disabled= true;document.getElementById("ustauch6").disabled= true;
+                          document.getElementById("A6").style.display="inline";document.getElementById("T6").style.display="inline"
+                         }                     
+
+                           
+                          else if (buttonId ==="ostauch6" || buttonId ==="ustreck6" || buttonId === "ostreck6") {alert("Leider falsch. Nach unten geöffnet und gestaucht ist richtig.");            
+                          document.getElementById("ostreck6").disabled= true;document.getElementById("ustreck6").disabled= true;
+                          document.getElementById("ostauch6").disabled= true;document.getElementById("ustauch6").disabled= true;
+                          document.getElementById("A6").style.display="inline";document.getElementById("T6").style.display="inline" }
+
+
+                          }                                            
+                          
+                                                
+                        
+                         
+                      </script>
+
+<p class = "Aufgabe" ><span style = "background-color:white;">Bestimmen Sie die Koordinaten des Scheitelpunktes S<br> 
+und der Nullstellen N.</span></p>
                       
   <!--//Aufgabe 7-->   
 
   <pre><p class="Aufgabe"><strong>Aufgabe 7
 
-Wie groß sind β und b, 
-wenn a = 6,7 cm und c = 8,3 cm?  </strong>
+y = x<sup>2</sup> + 1,5 </strong>
 
- <img src="Aufgabe1.jpg" align="middle"> 
- 
- <button  onclick="window.open('Trigo_Aufgabe7.html');" >Lösung</button></p></pre>
+<img src="Aufgabe7.jpg" > 
+
+<button  onclick="window.open('QFunkt_Aufgabe7.html');" >Lösung</button></p></pre>
 
 <!--//Aufgabe 8-->
 
   <pre><p class ="Aufgabe" ><strong>Aufgabe 8
 
-Wie groß sind die Ankathete von α und die Hypotenuse, 
-wenn α = 75° und seine Gegenkathete 9 cm lang ist?  </strong>
+y = x<sup>2</sup> - 1,5      </strong>
 
-<img src="Aufgabe1.jpg" align="middle"> 
+<img src="Aufgabe8.jpg"> 
 
-Hypotenuse = <input type="text" id="Eintrag8" maxlength="3" size="1" style= background-color:yellow ></input> cm <button id="Pruef8" onclick="Aufgabe8()">Prüfen</button></p></pre>
+S(0|<input type="text" id="Eintrag8" maxlength="3" size="1" style= background-color:yellow ></input>) <button id="Pruef8" onclick="Aufgabe8()">Prüfen</button></p></pre>
      
                       <script>
                         function Aufgabe8() { 
                                                 
-                          if (Eintrag8.value=="9,3") {alert("Richtig"); document.getElementById("Pruef8").disabled= true;
+                          if (Eintrag8.value=="1,5") {alert("Richtig"); document.getElementById("Pruef8").disabled= true;
                           }  
                            
-                          else if (Eintrag8.value!=="9,3" && Eintrag8.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag8").value="9,3"; window.open('Trigo_Aufgabe8.html');           
+                          else if (Eintrag8.value!=="1,5" && Eintrag8.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag8").value="1,5"; window.open('QFunkt_Aufgabe8.html');           
                           document.getElementById("Pruef8").disabled= true;}
                                
                           else if (Eintrag8.value=="") {alert("Bitte eine Eingabe machen")}}
@@ -162,31 +279,29 @@ Hypotenuse = <input type="text" id="Eintrag8" maxlength="3" size="1" style= back
 
   <pre><p class="Aufgabe"><strong>Aufgabe 9
 
-Die Gegenkathete des Winkels α ist 5 cm lang, 
-seine Ankathete 8,5 cm. Wie groß ist α?  
+y = 2x² + 1                
 
-<img src="Aufgabe1.jpg" align="middle"></strong> 
+<img src="Aufgabe9.jpg" ></strong> 
 
-<button  onclick="window.open('Trigo_Aufgabe9.html');" >Lösung</button></p></pre>
+<button  onclick="window.open('QFunkt_Aufgabe9.html');" >Lösung</button></p></pre>
 
 <!--//Aufgabe 10-->
 
   <pre><p class ="Aufgabe" ><strong>Aufgabe 10
 
-Wie groß sind die restlichen Seiten und Winkel, 
-wenn β = 30° und c = 83 cm?   </strong>
+y = -2x² - 1               </strong>
 
-<img src="Aufgabe1.jpg" align="middle"> 
+<img src="Aufgabe10.jpg"> 
 
-b = <input type="text" id="Eintrag10" maxlength="4" size="1" style= background-color:yellow ></input> cm <button id="Pruef10" onclick="Aufgabe10()">Prüfen</button></p></pre>
+S(0|<input type="text" id="Eintrag10" maxlength="2" size="1" style= background-color:yellow ></input>) <button id="Pruef10" onclick="Aufgabe10()">Prüfen</button></p></pre>
  
                       <script>
                         function Aufgabe10() { 
                                                 
-                          if (Eintrag10.value=="41,5") {alert("Richtig"); document.getElementById("Pruef10").disabled= true;
+                          if (Eintrag10.value=="-1") {alert("Richtig"); document.getElementById("Pruef10").disabled= true;
                           }  
                            
-                          else if (Eintrag10.value!=="41,5" && Eintrag10.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag10").value="41,5"; window.open('Trigo_Aufgabe10.html');           
+                          else if (Eintrag10.value!=="-1" && Eintrag10.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag10").value="-1"; window.open('QFunkt_Aufgabe10.html');           
                           document.getElementById("Pruef10").disabled= true;}
                                
                           else if (Eintrag10.value=="") {alert("Bitte eine Eingabe machen")}}
@@ -201,7 +316,7 @@ Wie groß ist die Strecke AB? </strong>
 
 <img src="Aufgabe11.jpg" align="middle"> 
 
-<button  onclick="window.open('Trigo_Aufgabe11.html');" >Lösung</button></p></pre>
+<button  onclick="window.open('QFunkt_Aufgabe11.html');" >Lösung</button></p></pre>
 
 <!--//Aufgabe 12-->
 
@@ -220,7 +335,7 @@ Wie groß ist der Winkel α?     </strong>
                           if (Eintrag12.value=="21,2") {alert("Richtig"); document.getElementById("Pruef12").disabled= true;
                           }  
                            
-                          else if (Eintrag12.value!=="21,2" && Eintrag12.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag12").value="21,2"; window.open('Trigo_Aufgabe12.html');           
+                          else if (Eintrag12.value!=="21,2" && Eintrag12.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag12").value="21,2"; window.open('QFunkt_Aufgabe12.html');           
                           document.getElementById("Pruef12").disabled= true;}
                                
                           else if (Eintrag12.value=="") {alert("Bitte eine Eingabe machen")}}
@@ -235,7 +350,7 @@ Wie groß sind die restlichen Seiten? </strong>
 
 <img src="Aufgabe13.jpg" align="middle"> 
 
-<button  onclick="window.open('Trigo_Aufgabe13.html');" >Lösung</button></p></pre>
+<button  onclick="window.open('QFunkt_Aufgabe13.html');" >Lösung</button></p></pre>
 
 <!--//Aufgabe 14-->
 
@@ -253,7 +368,7 @@ Wie groß sind AB und der Winkel α? </strong>
                           if (Eintrag14.value=="21,8") {alert("Richtig"); document.getElementById("Pruef14").disabled= true;
                           }  
                            
-                          else if (Eintrag14.value!=="21,8" && Eintrag14.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag14").value="21,8"; window.open('Trigo_Aufgabe14.html');           
+                          else if (Eintrag14.value!=="21,8" && Eintrag14.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag14").value="21,8"; window.open('QFunkt_Aufgabe14.html');           
                           document.getElementById("Pruef14").disabled= true;}
                                
                           else if (Eintrag14.value=="") {alert("Bitte eine Eingabe machen")}}
@@ -268,7 +383,7 @@ Wie groß sind AB und der Winkel α?  </strong>
 
 <img src="Aufgabe15.jpg" align="middle">  
 
-<button  onclick="window.open('Trigo_Aufgabe15.html');" >Lösung</button></p></pre>
+<button  onclick="window.open('QFunkt_Aufgabe15.html');" >Lösung</button></p></pre>
 
 <!--//Aufgabe 16-->
 
@@ -286,7 +401,7 @@ AB = <input type="text" id="Eintrag16" maxlength="3" size="1" style= background-
                           if (Eintrag16.value=="4,5") {alert("Richtig"); document.getElementById("Pruef16").disabled= true;
                           }  
                            
-                          else if (Eintrag16.value!=="4,5" && Eintrag16.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag16").value="4,5"; window.open('Trigo_Aufgabe16.html');           
+                          else if (Eintrag16.value!=="4,5" && Eintrag16.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag16").value="4,5"; window.open('QFunkt_Aufgabe16.html');           
                           document.getElementById("Pruef16").disabled= true;}
                                
                           else if (Eintrag16.value=="") {alert("Bitte eine Eingabe machen")}}
@@ -302,7 +417,7 @@ Wie groß ist seine Diagonale d? </strong>
 
 <img src="Aufgabe17.jpg" align="middle"> 
 
-<button  onclick="window.open('Trigo_Aufgabe17.html');" >Lösung</button></p></pre>
+<button  onclick="window.open('QFunkt_Aufgabe17.html');" >Lösung</button></p></pre>
 
 <!--//Aufgabe 18-->
 
@@ -322,7 +437,7 @@ Wie groß sind seine Winkel?   </strong>
                           if (Eintrag18.value=="90") {alert("Richtig"); document.getElementById("Pruef18").disabled= true;
                           }  
                            
-                          else if (Eintrag18.value!=="90" && Eintrag18.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag18").value="90"; window.open('Trigo_Aufgabe18.html');           
+                          else if (Eintrag18.value!=="90" && Eintrag18.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag18").value="90"; window.open('QFunkt_Aufgabe18.html');           
                           document.getElementById("Pruef18").disabled= true;}
                                
                           else if (Eintrag18.value=="") {alert("Bitte eine Eingabe machen")}}
@@ -337,7 +452,7 @@ Wandeln Sie um in Grad:
 5° 36' 12'' 
 41° 38' 3''    </strong> 
 
-<button  onclick="window.open('Trigo_Aufgabe19.html');" >Lösung</button></p></pre>
+<button  onclick="window.open('QFunkt_Aufgabe19.html');" >Lösung</button></p></pre>
 
 <!--//Aufgabe 20-->
 
@@ -354,7 +469,7 @@ Wandeln Sie um in Grad:
                           if (Eintrag20.value=="49") {alert("Richtig"); document.getElementById("Pruef20").disabled= true;
                           }  
                            
-                          else if (Eintrag20.value!=="49" && Eintrag20.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag20").value="49"; window.open('Trigo_Aufgabe20.html');           
+                          else if (Eintrag20.value!=="49" && Eintrag20.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag20").value="49"; window.open('QFunkt_Aufgabe20.html');           
                           document.getElementById("Pruef20").disabled= true;}
                                
                           else if (Eintrag20.value=="") {alert("Bitte eine Eingabe machen")}}
@@ -368,7 +483,7 @@ Wandeln Sie um in Grad:
 Rechnen Sie um in das Bogenmaß: 
 301° 17' ; 212° 39' ; 120°.  </strong> 
 
-<button  onclick="window.open('Trigo_Aufgabe21.html');" >Lösung</button></p></pre>
+<button  onclick="window.open('QFunkt_Aufgabe21.html');" >Lösung</button></p></pre>
 
 <!--//Aufgabe 22-->
 
@@ -387,7 +502,7 @@ b = <input type="text" id="Eintrag22" maxlength="4" size="1" style= background-c
                           if (Eintrag22.value=="49,9") {alert("Richtig"); document.getElementById("Pruef22").disabled= true;
                           }  
                            
-                          else if (Eintrag22.value!=="49,9" && Eintrag22.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag22").value="49,9"; window.open('Trigo_Aufgabe22.html');           
+                          else if (Eintrag22.value!=="49,9" && Eintrag22.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag22").value="49,9"; window.open('QFunkt_Aufgabe22.html');           
                           document.getElementById("Pruef22").disabled= true;}
                                
                           else if (Eintrag22.value=="") {alert("Bitte eine Eingabe machen")}}
@@ -403,7 +518,7 @@ wenn α = 67°38' und b = 25,42 cm?    </strong>
 
 <img src="Aufgabe1.jpg" align="middle"> 
 
-<button  onclick="window.open('Trigo_Aufgabe23.html');" >Lösung</button></p></pre>
+<button  onclick="window.open('QFunkt_Aufgabe23.html');" >Lösung</button></p></pre>
 
 <!--//Aufgabe 24-->
 
@@ -423,7 +538,7 @@ a = <input type="text" id="Eintrag24" maxlength="4" size="1" style= background-c
                           if (Eintrag24.value=="23,3") {alert("Richtig"); document.getElementById("Pruef24").disabled= true;
                           }  
                            
-                          else if (Eintrag24.value!=="23,3" && Eintrag24.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag24").value="23,3"; window.open('Trigo_Aufgabe24.html');           
+                          else if (Eintrag24.value!=="23,3" && Eintrag24.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag24").value="23,3"; window.open('QFunkt_Aufgabe24.html');           
                           document.getElementById("Pruef24").disabled= true;}
                                
                           else if (Eintrag24.value=="") {alert("Bitte eine Eingabe machen")}}
@@ -438,7 +553,7 @@ Berechnen Sie die Fläche A des gleichschenkligen Dreiecks. </strong>
 
 <img src="Aufgabe25.jpg" align="middle"> 
 
-<button  onclick="window.open('Trigo_Aufgabe25.html');" >Lösung</button></p></pre>
+<button  onclick="window.open('QFunkt_Aufgabe25.html');" >Lösung</button></p></pre>
 
 <!--//Aufgabe 26-->
 
@@ -456,7 +571,7 @@ A = <input type="text" id="Eintrag26" maxlength="7" size="3" style= background-c
                           if (Eintrag26.value=="28933,2") {alert("Richtig"); document.getElementById("Pruef26").disabled= true;
                           }  
                            
-                          else if (Eintrag26.value!=="28933,2" && Eintrag26.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag26").value="28933,2"; window.open('Trigo_Aufgabe26.html');           
+                          else if (Eintrag26.value!=="28933,2" && Eintrag26.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag26").value="28933,2"; window.open('QFunkt_Aufgabe26.html');           
                           document.getElementById("Pruef26").disabled= true;}
                                
                           else if (Eintrag26.value=="") {alert("Bitte eine Eingabe machen")}}
@@ -470,7 +585,7 @@ A = <input type="text" id="Eintrag26" maxlength="7" size="3" style= background-c
 Ein regelmäßiges 36-Eck hat eine Fläche von 7875 cm².
 Wie groß ist der Radius r seines Umkreises?  </strong> 
 
-<button  onclick="window.open('Trigo_Aufgabe27.html');" >Lösung</button></p></pre>
+<button  onclick="window.open('QFunkt_Aufgabe27.html');" >Lösung</button></p></pre>
 
 <!--//Aufgabe 28-->
 
@@ -488,7 +603,7 @@ p = <input type="text" id="Eintrag28" maxlength="3" size="1" style= background-c
                           if (Eintrag28.value=="0,3") {alert("Richtig"); document.getElementById("Pruef28").disabled= true;
                           }  
                            
-                          else if (Eintrag28.value!=="0,3" && Eintrag28.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag28").value="0,3"; window.open('Trigo_Aufgabe28.html');           
+                          else if (Eintrag28.value!=="0,3" && Eintrag28.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag28").value="0,3"; window.open('QFunkt_Aufgabe28.html');           
                           document.getElementById("Pruef28").disabled= true;}
                                
                           else if (Eintrag28.value=="") {alert("Bitte eine Eingabe machen")}}
@@ -503,7 +618,7 @@ Berechnen Sie p. wenn r = 20 m und s = 15 m.   </strong>
 
 <img src="Aufgabe28.jpg" align="middle"> 
 
-<button  onclick="window.open('Trigo_Aufgabe29.html');" >Lösung</button></p></pre>
+<button  onclick="window.open('QFunkt_Aufgabe29.html');" >Lösung</button></p></pre>
 
 <!--//Aufgabe 30-->
 
@@ -521,7 +636,7 @@ p = <input type="text" id="Eintrag30" maxlength="3" size="1" style= background-c
                           if (Eintrag30.value=="9,2") {alert("Richtig"); document.getElementById("Pruef30").disabled= true;
                           }  
                            
-                          else if (Eintrag30.value!=="9,2" && Eintrag30.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag30").value="9,2"; window.open('Trigo_Aufgabe30.html');           
+                          else if (Eintrag30.value!=="9,2" && Eintrag30.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag30").value="9,2"; window.open('QFunkt_Aufgabe30.html');           
                           document.getElementById("Pruef30").disabled= true;}
                                
                           else if (Eintrag30.value=="") {alert("Bitte eine Eingabe machen")}}
@@ -536,7 +651,7 @@ Um wie viel cm ist der Bogen b länger als die Sehne s? </strong>
 
 <img src="Aufgabe31.jpg" align="middle"> 
 
-<button  onclick="window.open('Trigo_Aufgabe31.html');" >Lösung</button></p></pre>
+<button  onclick="window.open('QFunkt_Aufgabe31.html');" >Lösung</button></p></pre>
 
 <!--//Aufgabe 32-->
 
@@ -555,7 +670,7 @@ A = <input type="text" id="Eintrag32" maxlength="4" size="1" style= background-c
                           if (Eintrag32.value=="25,6") {alert("Richtig"); document.getElementById("Pruef32").disabled= true;
                           }  
                            
-                          else if (Eintrag32.value!=="25,6" && Eintrag32.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag32").value="25,6"; window.open('Trigo_Aufgabe32.html');           
+                          else if (Eintrag32.value!=="25,6" && Eintrag32.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag32").value="25,6"; window.open('QFunkt_Aufgabe32.html');           
                           document.getElementById("Pruef32").disabled= true;}
                                
                           else if (Eintrag32.value=="") {alert("Bitte eine Eingabe machen")}}
@@ -571,7 +686,7 @@ Umkreisradius r<sub>u</sub> des gleichschenkligen Dreiecks?     </strong>
 
 <img src="Aufgabe33.jpg" align="middle"> 
 
-<button  onclick="window.open('Trigo_Aufgabe33.html');" >Lösung</button></p></pre>
+<button  onclick="window.open('QFunkt_Aufgabe33.html');" >Lösung</button></p></pre>
 
 <!--//Aufgabe 34-->
 
@@ -589,7 +704,7 @@ b = <input type="text" id="Eintrag34" maxlength="4" size="1" style= background-c
                           if (Eintrag34.value=="96,6") {alert("Richtig"); document.getElementById("Pruef34").disabled= true;
                           }  
                            
-                          else if (Eintrag34.value!=="96,6" && Eintrag34.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag34").value="96,6"; window.open('Trigo_Aufgabe34.html');           
+                          else if (Eintrag34.value!=="96,6" && Eintrag34.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag34").value="96,6"; window.open('QFunkt_Aufgabe34.html');           
                           document.getElementById("Pruef34").disabled= true;}
                                
                           else if (Eintrag34.value=="") {alert("Bitte eine Eingabe machen")}}
@@ -604,7 +719,7 @@ Berechnen Sie a, b und c.    </strong>
 
 <img src="Aufgabe35.jpg" align="middle"> 
 
-<button  onclick="window.open('Trigo_Aufgabe35.html');" >Lösung</button></p></pre>
+<button  onclick="window.open('QFunkt_Aufgabe35.html');" >Lösung</button></p></pre>
 
 <!--//Aufgabe 36-->
 
@@ -623,7 +738,7 @@ a = <input type="text" id="Eintrag36" maxlength="4" size="1" style= background-c
                           if (Eintrag36.value=="68,7") {alert("Richtig"); document.getElementById("Pruef36").disabled= true;
                           }  
                            
-                          else if (Eintrag36.value!=="68,7" && Eintrag36.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag36").value="68,7"; window.open('Trigo_Aufgabe36.html');           
+                          else if (Eintrag36.value!=="68,7" && Eintrag36.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag36").value="68,7"; window.open('QFunkt_Aufgabe36.html');           
                           document.getElementById("Pruef36").disabled= true;}
                                
                           else if (Eintrag36.value=="") {alert("Bitte eine Eingabe machen")}}
@@ -638,7 +753,7 @@ Berechnen Sie β, b und c.   </strong>
 
 <img src="Aufgabe37.jpg" align="middle">  
 
-<button  onclick="window.open('Trigo_Aufgabe37.html');" >Lösung</button></p></pre>
+<button  onclick="window.open('QFunkt_Aufgabe37.html');" >Lösung</button></p></pre>
 
 <!--//Aufgabe 38-->
 
@@ -657,7 +772,7 @@ b = <input type="text" id="Eintrag38" maxlength="3" size="1" style= background-c
                           if (Eintrag38.value=="8,2") {alert("Richtig"); document.getElementById("Pruef38").disabled= true;
                           }  
                            
-                          else if (Eintrag38.value!=="8,2" && Eintrag38.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag38").value="8,2"; window.open('Trigo_Aufgabe38.html');           
+                          else if (Eintrag38.value!=="8,2" && Eintrag38.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag38").value="8,2"; window.open('QFunkt_Aufgabe38.html');           
                           document.getElementById("Pruef38").disabled= true;}
                                
                           else if (Eintrag38.value=="") {alert("Bitte eine Eingabe machen")}}
@@ -672,7 +787,7 @@ Berechnen Sie α, a und c.     </strong>
 
 <img src="Aufgabe39.jpg" align="middle"> 
 
-<button  onclick="window.open('Trigo_Aufgabe39.html');" >Lösung</button></p></pre>
+<button  onclick="window.open('QFunkt_Aufgabe39.html');" >Lösung</button></p></pre>
 
 <!--//Aufgabe 40-->
 
@@ -690,7 +805,7 @@ Wie groß ist α in dem gleichschenkligen Dreieck?    </strong>
                           if (Eintrag40.value=="69,6") {alert("Richtig"); document.getElementById("Pruef40").disabled= true;
                           }  
                            
-                          else if (Eintrag40.value!=="69,6" && Eintrag40.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag40").value="69,6"; window.open('Trigo_Aufgabe40.html');           
+                          else if (Eintrag40.value!=="69,6" && Eintrag40.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag40").value="69,6"; window.open('QFunkt_Aufgabe40.html');           
                           document.getElementById("Pruef40").disabled= true;}
                                
                           else if (Eintrag40.value=="") {alert("Bitte eine Eingabe machen")}}
@@ -705,7 +820,7 @@ Berechnen Sie den Schnittwinkel ε der beiden Diagonalen.  </strong>
 
 <img src="Aufgabe41.jpg" align="middle"> 
 
-<button  onclick="window.open('Trigo_Aufgabe41.html');" >Lösung</button></p></pre>
+<button  onclick="window.open('QFunkt_Aufgabe41.html');" >Lösung</button></p></pre>
 
 <!--//Aufgabe 42-->
 
@@ -724,7 +839,7 @@ Berechnen Sie den Schnittwinkel ε der beiden Diagonalen.   </strong>
                           if (Eintrag42.value=="71,2") {alert("Richtig"); document.getElementById("Pruef42").disabled= true;
                           }  
                            
-                          else if (Eintrag42.value!=="71,2" && Eintrag42.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag42").value="71,2"; window.open('Trigo_Aufgabe42.html');           
+                          else if (Eintrag42.value!=="71,2" && Eintrag42.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag42").value="71,2"; window.open('QFunkt_Aufgabe42.html');           
                           document.getElementById("Pruef42").disabled= true;}
                                
                           else if (Eintrag42.value=="") {alert("Bitte eine Eingabe machen")}}
@@ -739,7 +854,7 @@ Wie groß sind die Seiten a und b des Rechtecks?
 
 <img src="Aufgabe43.jpg" align="middle"> </strong> 
 
-<button  onclick="window.open('Trigo_Aufgabe43.html');" >Lösung</button></p></pre>
+<button  onclick="window.open('QFunkt_Aufgabe43.html');" >Lösung</button></p></pre>
 
 <!--//Aufgabe 44-->
 
@@ -758,7 +873,7 @@ a = <input type="text" id="Eintrag44" maxlength="3" size="1" style= background-c
                           if (Eintrag44.value=="6,1") {alert("Richtig"); document.getElementById("Pruef44").disabled= true;
                           }  
                            
-                          else if (Eintrag44.value!=="6,1" && Eintrag44.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag44").value="6,1"; window.open('Trigo_Aufgabe44.html');           
+                          else if (Eintrag44.value!=="6,1" && Eintrag44.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag44").value="6,1"; window.open('QFunkt_Aufgabe44.html');           
                           document.getElementById("Pruef44").disabled= true;}
                                
                           else if (Eintrag44.value=="") {alert("Bitte eine Eingabe machen")}}
@@ -773,7 +888,7 @@ Wie groß sind die Seiten a und b des Rechtecks? </strong>
 
 <img src="Aufgabe45.jpg" align="middle"> 
 
-<button  onclick="window.open('Trigo_Aufgabe45.html');" >Lösung</button></p></pre>
+<button  onclick="window.open('QFunkt_Aufgabe45.html');" >Lösung</button></p></pre>
 
 <!--//Aufgabe 46-->
 
@@ -792,7 +907,7 @@ e = <input type="text" id="Eintrag46" maxlength="4" size="1" style= background-c
                           if (Eintrag46.value=="28,1") {alert("Richtig"); document.getElementById("Pruef46").disabled= true;
                           }  
                            
-                          else if (Eintrag46.value!=="28,1" && Eintrag46.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag46").value="28,1"; window.open('Trigo_Aufgabe46.html');           
+                          else if (Eintrag46.value!=="28,1" && Eintrag46.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag46").value="28,1"; window.open('QFunkt_Aufgabe46.html');           
                           document.getElementById("Pruef46").disabled= true;}
                                
                           else if (Eintrag46.value=="") {alert("Bitte eine Eingabe machen")}}
@@ -807,7 +922,7 @@ Wie groß ist die Diagonale e der Raute?   </strong>
 
 <img src="Aufgabe47.jpg" align="middle"> 
 
-<button  onclick="window.open('Trigo_Aufgabe47.html');" >Lösung</button></p></pre>
+<button  onclick="window.open('QFunkt_Aufgabe47.html');" >Lösung</button></p></pre>
 
 <!--//Aufgabe 48-->
 
@@ -826,7 +941,7 @@ e = <input type="text" id="Eintrag48" maxlength="2" size="1" style= background-c
                           if (Eintrag48.value=="30") {alert("Richtig"); document.getElementById("Pruef48").disabled= true;
                           }  
                            
-                          else if (Eintrag48.value!=="30" && Eintrag48.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag48").value="30"; window.open('Trigo_Aufgabe48.html');           
+                          else if (Eintrag48.value!=="30" && Eintrag48.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag48").value="30"; window.open('QFunkt_Aufgabe48.html');           
                           document.getElementById("Pruef48").disabled= true;}
                                
                           else if (Eintrag48.value=="") {alert("Bitte eine Eingabe machen")}}
@@ -842,7 +957,7 @@ und die Seite a der Raute? </strong>
 
 <img src="Aufgabe49.jpg" align="middle"> 
 
-<button  onclick="window.open('Trigo_Aufgabe49.html');" >Lösung</button></p></pre>
+<button  onclick="window.open('QFunkt_Aufgabe49.html');" >Lösung</button></p></pre>
 
 <!--//Aufgabe 50-->
 
@@ -861,7 +976,7 @@ a = <input type="text" id="Eintrag50" maxlength="3" size="1" style= background-c
                           if (Eintrag50.value=="5,4") {alert("Richtig"); document.getElementById("Pruef50").disabled= true;
                           }  
                            
-                          else if (Eintrag50.value!=="5,4" && Eintrag50.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag50").value="5,4"; window.open('Trigo_Aufgabe50.html');           
+                          else if (Eintrag50.value!=="5,4" && Eintrag50.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag50").value="5,4"; window.open('QFunkt_Aufgabe50.html');           
                           document.getElementById("Pruef50").disabled= true;}
                                
                           else if (Eintrag50.value=="") {alert("Bitte eine Eingabe machen")}}
@@ -876,7 +991,7 @@ Wie groß ist die Diagonale f der Raute?  </strong>
 
 <img src="Aufgabe51.jpg" align="middle"> 
 
-<button  onclick="window.open('Trigo_Aufgabe51.html');" >Lösung</button></p></pre>
+<button  onclick="window.open('QFunkt_Aufgabe51.html');" >Lösung</button></p></pre>
 
 <!--//Aufgabe 52-->
 
@@ -896,7 +1011,7 @@ und der Winkel β des Drachens?   </strong>
                           if (Eintrag52.value=="113,9") {alert("Richtig"); document.getElementById("Pruef52").disabled= true;
                           }  
                            
-                          else if (Eintrag52.value!=="113,9" && Eintrag52.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag52").value="113,9"; window.open('Trigo_Aufgabe52.html');           
+                          else if (Eintrag52.value!=="113,9" && Eintrag52.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag52").value="113,9"; window.open('QFunkt_Aufgabe52.html');           
                           document.getElementById("Pruef52").disabled= true;}
                                
                           else if (Eintrag52.value=="") {alert("Bitte eine Eingabe machen")}}
@@ -912,7 +1027,7 @@ gleichschenkligen Trapezes. </strong>
 
 <img src="Aufgabe53.jpg" align="middle"> 
 
-<button  onclick="window.open('Trigo_Aufgabe53.html');" >Lösung</button></p></pre>
+<button  onclick="window.open('QFunkt_Aufgabe53.html');" >Lösung</button></p></pre>
 
 <!--//Aufgabe 54-->
 
@@ -932,7 +1047,7 @@ s = <input type="text" id="Eintrag54" maxlength="1" size="1" style= background-c
                           if (Eintrag54.value=="7") {alert("Richtig"); document.getElementById("Pruef54").disabled= true;
                           }  
                            
-                          else if (Eintrag54.value!=="7" && Eintrag54.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag54").value="7"; window.open('Trigo_Aufgabe54.html');           
+                          else if (Eintrag54.value!=="7" && Eintrag54.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag54").value="7"; window.open('QFunkt_Aufgabe54.html');           
                           document.getElementById("Pruef54").disabled= true;}
                                
                           else if (Eintrag54.value=="") {alert("Bitte eine Eingabe machen")}}
@@ -948,7 +1063,7 @@ Abstand d der Sehne s vom Mittelpunkt?   </strong>
 
 <img src="Aufgabe55.jpg" align="middle"> 
 
-<button  onclick="window.open('Trigo_Aufgabe55.html');" >Lösung</button></p></pre>
+<button  onclick="window.open('QFunkt_Aufgabe55.html');" >Lösung</button></p></pre>
 
 <!--//Aufgabe 56-->
 
@@ -967,7 +1082,7 @@ Wie groß sind der Mittelpunktswinkel ε und der Radius r?    </strong>
                           if (Eintrag56.value=="83,6") {alert("Richtig"); document.getElementById("Pruef56").disabled= true;
                           }  
                            
-                          else if (Eintrag56.value!=="83,6" && Eintrag56.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag56").value="83,6"; window.open('Trigo_Aufgabe56.html');           
+                          else if (Eintrag56.value!=="83,6" && Eintrag56.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag56").value="83,6"; window.open('QFunkt_Aufgabe56.html');           
                           document.getElementById("Pruef56").disabled= true;}
                                
                           else if (Eintrag56.value=="") {alert("Bitte eine Eingabe machen")}}
@@ -982,7 +1097,7 @@ Wie groß sind die Winkel α und β in dem Würfel?    </strong>
 
 <img src="Aufgabe57.jpg" align="middle"> 
 
-<button  onclick="window.open('Trigo_Aufgabe57.html');" >Lösung</button></p></pre>
+<button  onclick="window.open('QFunkt_Aufgabe57.html');" >Lösung</button></p></pre>
 
 <!--//Aufgabe 58-->
 
@@ -1001,7 +1116,7 @@ Wie groß sind die Winkel α, β und γ?   </strong>
                           if (Eintrag58.value=="69,4") {alert("Richtig"); document.getElementById("Pruef58").disabled= true;
                           }  
                            
-                          else if (Eintrag58.value!=="69,4" && Eintrag58.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag58").value="69,4"; window.open('Trigo_Aufgabe58.html');           
+                          else if (Eintrag58.value!=="69,4" && Eintrag58.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag58").value="69,4"; window.open('QFunkt_Aufgabe58.html');           
                           document.getElementById("Pruef58").disabled= true;}
                                
                           else if (Eintrag58.value=="") {alert("Bitte eine Eingabe machen")}}
@@ -1016,7 +1131,7 @@ Wie groß sind s und α?  </strong>
 
 <img src="Aufgabe59.jpg" align="middle"> 
 
-<button  onclick="window.open('Trigo_Aufgabe59.html');" >Lösung</button></p></pre>
+<button  onclick="window.open('QFunkt_Aufgabe59.html');" >Lösung</button></p></pre>
 
 <!--//Aufgabe 60-->
 
@@ -1035,7 +1150,7 @@ Wie groß sind s und γ?     </strong>
                           if (Eintrag60.value=="30") {alert("Richtig"); document.getElementById("Pruef60").disabled= true;
                           }  
                            
-                          else if (Eintrag60.value!=="30" && Eintrag60.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag60").value="30"; window.open('Trigo_Aufgabe60.html');           
+                          else if (Eintrag60.value!=="30" && Eintrag60.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag60").value="30"; window.open('QFunkt_Aufgabe60.html');           
                           document.getElementById("Pruef60").disabled= true;}
                                
                           else if (Eintrag60.value=="") {alert("Bitte eine Eingabe machen")}}
@@ -1052,7 +1167,7 @@ der Neigungswinkel α der Seitenflächen, der Neigungswinkel β
 der Seitenkanten gegen die Grundfläche und der Winkel γ an der
 Spitze eines Manteldreiecks?   </strong> 
 
-<button  onclick="window.open('Trigo_Aufgabe61.html');" >Lösung</button></p></pre>
+<button  onclick="window.open('QFunkt_Aufgabe61.html');" >Lösung</button></p></pre>
 
 <!--//Aufgabe 62-->
 
@@ -1071,7 +1186,7 @@ h = <input type="text" id="Eintrag62" maxlength="3" size="1" style= background-c
                           if (Eintrag62.value=="3.5") {alert("Richtig"); document.getElementById("Pruef62").disabled= true;
                           }  
                            
-                          else if (Eintrag62.value!=="3,5" && Eintrag62.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag62").value="3,5"; window.open('Trigo_Aufgabe62.html');           
+                          else if (Eintrag62.value!=="3,5" && Eintrag62.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag62").value="3,5"; window.open('QFunkt_Aufgabe62.html');           
                           document.getElementById("Pruef62").disabled= true;}
                                
                           else if (Eintrag62.value=="") {alert("Bitte eine Eingabe machen")}}
@@ -1087,7 +1202,7 @@ an den Kreis gelegten Tangenten?   </strong>
 
 <img src="Aufgabe63.jpg" align="middle"> 
 
-<button  onclick="window.open('Trigo_Aufgabe63.html');" >Lösung</button></p></pre>
+<button  onclick="window.open('QFunkt_Aufgabe63.html');" >Lösung</button></p></pre>
 
 
 <a href= "index.html" ><p class="Text2" > <span style= "background-color:white;">zurück</span></p></a>
@@ -1106,4 +1221,3 @@ an den Kreis gelegten Tangenten?   </strong>
         </body></html>
 
                       
-                    
