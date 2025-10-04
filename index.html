@@ -239,8 +239,8 @@ y   -2   <input type="text" id="Eintrag6" maxlength="2" size="1" style= backgrou
                          
                       </script>
 
-<p class = "Aufgabe" ><span style = "background-color:white;">Bestimmen Sie die Koordinaten des Scheitelpunktes S<br> 
-und der Nullstellen N.</span></p>
+<pre><p class = "Aufgabe" ><span style = "background-color:white;">Bestimmen Sie die Koordinaten des Scheitelpunktes S 
+und der Nullstellen N.</span></p></pre>
                       
   <!--//Aufgabe 7-->   
 
@@ -312,9 +312,9 @@ S(0|<input type="text" id="Eintrag10" maxlength="2" size="1" style= background-c
 
   <pre><p class="Aufgabe"><strong>Aufgabe 11
 
-Wie groß ist die Strecke AB? </strong> 
+y = 0,2x<sup>2</sup> - 2                </strong> 
 
-<img src="Aufgabe11.jpg" align="middle"> 
+<img src="Aufgabe11.jpg"> 
 
 <button  onclick="window.open('QFunkt_Aufgabe11.html');" >Lösung</button></p></pre>
 
@@ -322,33 +322,34 @@ Wie groß ist die Strecke AB? </strong>
 
   <pre><p class ="Aufgabe" ><strong>Aufgabe 12
 
-Wie groß ist der Winkel α?     </strong>
+y = -0,2x<sup>2</sup> + 2                 </strong>
 
-<img src="Aufgabe12.jpg" align="middle"> 
+<img src="Aufgabe12.jpg" > 
 
-α = <input type="text" id="Eintrag12" maxlength="4" size="1" style= background-color:yellow ></input> ° <button id="Pruef12" onclick="Aufgabe12()">Prüfen</button></p></pre><nobr>
+S(<input type="text" id="Eintrag12" maxlength="1" size="1" style= background-color:yellow ></input>|2) <button id="Pruef12" onclick="Aufgabe12()">Prüfen</button></p></pre><nobr>
 
  
                       <script>
                         function Aufgabe12() { 
                                                 
-                          if (Eintrag12.value=="21,2") {alert("Richtig"); document.getElementById("Pruef12").disabled= true;
+                          if (Eintrag12.value=="0") {alert("Richtig"); document.getElementById("Pruef12").disabled= true;
                           }  
                            
-                          else if (Eintrag12.value!=="21,2" && Eintrag12.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag12").value="21,2"; window.open('QFunkt_Aufgabe12.html');           
+                          else if (Eintrag12.value!=="0" && Eintrag12.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag12").value="0"; window.open('QFunkt_Aufgabe12.html');           
                           document.getElementById("Pruef12").disabled= true;}
                                
                           else if (Eintrag12.value=="") {alert("Bitte eine Eingabe machen")}}
                          
                       </script>
+
+<pre><p class = "Aufgabe" ><span style = "background-color:white;">Wie groß ist c, wenn eine Parabel 
+der Form y = x<sup>2</sup> + c</span></p></pre>                      
               
     <!--//Aufgabe 13--> 
                       
     <pre><p class="Aufgabe"><strong>Aufgabe 13
 
-Wie groß sind die restlichen Seiten? </strong> 
-
-<img src="Aufgabe13.jpg" align="middle"> 
+durch den Punkt (0|1) geht? </strong> 
 
 <button  onclick="window.open('QFunkt_Aufgabe13.html');" >Lösung</button></p></pre>
 
@@ -356,19 +357,17 @@ Wie groß sind die restlichen Seiten? </strong>
 
   <pre><p class ="Aufgabe" ><strong>Aufgabe 14
 
-Wie groß sind AB und der Winkel α? </strong>
+durch den Punkt (2|0) geht? </strong>
 
-<img src="Aufgabe14.jpg" align="middle"> 
-
-α = <input type="text" id="Eintrag14" maxlength="4" size="1" style= background-color:yellow ></input> ° <button id="Pruef14" onclick="Aufgabe14()">Prüfen</button></p></pre>
+c = <input type="text" id="Eintrag14" maxlength="2" size="1" style= background-color:yellow ></input> <button id="Pruef14" onclick="Aufgabe14()">Prüfen</button></p></pre>
  
                       <script>
                         function Aufgabe14() { 
                                                 
-                          if (Eintrag14.value=="21,8") {alert("Richtig"); document.getElementById("Pruef14").disabled= true;
+                          if (Eintrag14.value=="-4") {alert("Richtig"); document.getElementById("Pruef14").disabled= true;
                           }  
                            
-                          else if (Eintrag14.value!=="21,8" && Eintrag14.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag14").value="21,8"; window.open('QFunkt_Aufgabe14.html');           
+                          else if (Eintrag14.value!=="-4" && Eintrag14.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag14").value="-4"; window.open('QFunkt_Aufgabe14.html');           
                           document.getElementById("Pruef14").disabled= true;}
                                
                           else if (Eintrag14.value=="") {alert("Bitte eine Eingabe machen")}}
@@ -379,199 +378,225 @@ Wie groß sind AB und der Winkel α? </strong>
                       
     <pre><p class="Aufgabe"><strong>Aufgabe 15
 
-Wie groß sind AB und der Winkel α?  </strong> 
+Liegt der Punkt (1|-3,5) auf dem Graphen der 
+Funktion y = x² - 4,5?                                  </strong> 
 
-<img src="Aufgabe15.jpg" align="middle">  
+<button id ="Ja" onclick="Schalter15('Ja')">Liegt auf dem Graphen.</button> 
+<button id ="Nein" onclick="Schalter15('Nein')" >Liegt nicht auf dem Graphen.</button></p></pre> 
 
-<button  onclick="window.open('QFunkt_Aufgabe15.html');" >Lösung</button></p></pre>
+<button  id = "L15" onclick="window.open('QFunkt_Aufgabe15.html');" style="display:none;">Lösung</button> 
+
+<script>
+function Schalter15(buttonId) { 
+                                                
+                          if (buttonId==="Ja") {alert("Richtig"); document.getElementById("Ja").disabled= true;document.getElementById("Nein").disabled= true;
+                          document.getElementById("L15").style.display="inline";
+                         }                     
+
+                           
+                          else if (buttonId ==="Nein") {alert("Leider falsch.");            
+                          document.getElementById("Ja").disabled= true;document.getElementById("Nein").disabled= true;
+                          document.getElementById("L15").style.display="inline"; }
+
+                             }
+
+                          </script>
 
 <!--//Aufgabe 16-->
 
-  <pre><p class ="Aufgabe" ><strong>Aufgabe 16
+<pre><p class="Aufgabe"><strong>Aufgabe 16
 
-Wie groß ist AB in dem gleichschenkligen Dreieck?   </strong>
+Liegt der Punkt (-1|-5,5) auf dem Graphen der 
+Funktion y = x² - 4,5?                                                          </strong> 
 
-<img src="Aufgabe16.jpg" align="middle"> 
+<button id ="Ja1" onclick="Schalter16('Ja1')">Liegt auf dem Graphen.</button> 
+<button id ="Nein1" onclick="Schalter16('Nein1')" >Liegt nicht auf dem Graphen.</button></p></pre> 
 
-AB = <input type="text" id="Eintrag16" maxlength="3" size="1" style= background-color:yellow ></input> cm <button id="Pruef16" onclick="Aufgabe16()">Prüfen</button></p></pre>
- 
-                      <script>
-                        function Aufgabe16() { 
+<button  id = "L16" onclick="window.open('QFunkt_Aufgabe16.html');" style="display:none;">Lösung</button> 
+
+<script>
+function Schalter16(buttonId) { 
                                                 
-                          if (Eintrag16.value=="4,5") {alert("Richtig"); document.getElementById("Pruef16").disabled= true;
-                          }  
+                          if (buttonId==="Nein1") {alert("Richtig"); document.getElementById("Ja1").disabled= true;document.getElementById("Nein1").disabled= true;
+                          document.getElementById("L16").style.display="inline";
+                         }                     
+
                            
-                          else if (Eintrag16.value!=="4,5" && Eintrag16.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag16").value="4,5"; window.open('QFunkt_Aufgabe16.html');           
-                          document.getElementById("Pruef16").disabled= true;}
-                               
-                          else if (Eintrag16.value=="") {alert("Bitte eine Eingabe machen")}}
-                         
-                      </script>
-                      
-       <!--//Aufgabe 17--> 
-                      
-    <pre><p class="Aufgabe"><strong>Aufgabe 17
+                          else if (buttonId ==="Ja1") {alert("Leider falsch.");            
+                          document.getElementById("Ja1").disabled= true;document.getElementById("Nein1").disabled= true;
+                          document.getElementById("L16").style.display="inline"; }
 
-Ein Quadrat hat eine Seitenlänge von 5,8 cm. 
-Wie groß ist seine Diagonale d? </strong>  
+                             }
 
-<img src="Aufgabe17.jpg" align="middle"> 
+                          </script>
+                                          
+<!--//Aufgabe 17-->
 
-<button  onclick="window.open('QFunkt_Aufgabe17.html');" >Lösung</button></p></pre>
+<pre><p class ="Aufgabe" ><strong>Aufgabe 17
 
-<!--//Aufgabe 18-->
+In welchen Punkten schneiden sich die Parabel y = x² + 1 
+und die Gerade y = x + 3? </strong>
 
-  <pre><p class ="Aufgabe" ><strong>Aufgabe 18
-
-Die Seiten eines Dreiecks sind 5,4 cm, 7,2 cm und 9 cm lang. 
-Wie groß sind seine Winkel?   </strong>
-
-<img src="Aufgabe18.jpg" align="middle"> 
-
-β = <input type="text" id="Eintrag18" maxlength="2" size="1" style= background-color:yellow ></input> ° <button id="Pruef18" onclick="Aufgabe18()">Prüfen</button></p></pre>
+P<sub>1</sub>(<input type="text" id="Eintrag17" maxlength="2" size="1" style= background-color:yellow ></input>|2) <button id="Pruef17" onclick="Aufgabe17()">Prüfen</button></p></pre>
     
  
                       <script>
-                        function Aufgabe18() { 
+                        function Aufgabe17() { 
                                                 
-                          if (Eintrag18.value=="90") {alert("Richtig"); document.getElementById("Pruef18").disabled= true;
+                          if (Eintrag17.value=="-1") {alert("Richtig"); document.getElementById("Pruef17").disabled= true;
                           }  
                            
-                          else if (Eintrag18.value!=="90" && Eintrag18.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag18").value="90"; window.open('QFunkt_Aufgabe18.html');           
-                          document.getElementById("Pruef18").disabled= true;}
+                          else if (Eintrag17.value!=="-1" && Eintrag17.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag17").value="-1"; window.open('QFunkt_Aufgabe17.html');           
+                          document.getElementById("Pruef17").disabled= true;}
                                
-                          else if (Eintrag18.value=="") {alert("Bitte eine Eingabe machen")}}
+                          else if (Eintrag17.value=="") {alert("Bitte eine Eingabe machen")}}
                          
                       </script> 
                       
-       <!--//Aufgabe 19--> 
+       <!--//Aufgabe 18--> 
                       
-    <pre><p class="Aufgabe"><strong>Aufgabe 19
+    <pre><p class="Aufgabe"><strong>Aufgabe 18
 
-Wandeln Sie um in Grad: 
-5° 36' 12'' 
-41° 38' 3''    </strong> 
+In welchen Punkten schneiden sich die Parabel y = x² - 5 
+und die Gerade y = -x + 1?     </strong> 
 
-<button  onclick="window.open('QFunkt_Aufgabe19.html');" >Lösung</button></p></pre>
+<button  onclick="window.open('QFunkt_Aufgabe18.html');" >Lösung</button></p></pre>
 
 <!--//Aufgabe 20-->
 
-  <pre><p class ="Aufgabe" ><strong>Aufgabe 20
+  <pre><p class ="Aufgabe" ><strong>Aufgabe 19
 
-32,28° = 32°        '        ''  
-4,83° = 4° <input type="text" id="Eintrag20" maxlength="2" size="1" style= background-color:yellow ></input> '        ''    </strong>
+Welchen Wert muss x in der Funktion y = x² annehmen, 
+um für y das 9-fache von 5,76 zu erhalten?  </strong>
 
-<button id="Pruef20" onclick="Aufgabe20()">Prüfen</button></p></pre>
+x muss = ± <input type="text" id="Eintrag19" maxlength="3" size="1" style= background-color:yellow ></input> sein. <button id="Pruef19" onclick="Aufgabe19()">Prüfen</button></p></pre>
  
                       <script>
-                        function Aufgabe20() { 
+                        function Aufgabe19() { 
                                                 
-                          if (Eintrag20.value=="49") {alert("Richtig"); document.getElementById("Pruef20").disabled= true;
+                          if (Eintrag19.value=="7,2") {alert("Richtig"); document.getElementById("Pruef19").disabled= true;
                           }  
                            
-                          else if (Eintrag20.value!=="49" && Eintrag20.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag20").value="49"; window.open('QFunkt_Aufgabe20.html');           
-                          document.getElementById("Pruef20").disabled= true;}
+                          else if (Eintrag19.value!=="7,2" && Eintrag19.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag19").value="7,2"; window.open('QFunkt_Aufgabe19.html');           
+                          document.getElementById("Pruef19").disabled= true;}
                                
-                          else if (Eintrag20.value=="") {alert("Bitte eine Eingabe machen")}}
+                          else if (Eintrag19.value=="") {alert("Bitte eine Eingabe machen")}}
                          
                       </script> 
                       
-         <!--//Aufgabe 21--> 
+         <!--//Aufgabe 20--> 
                       
-    <pre><p class="Aufgabe"><strong>Aufgabe 21
+    <pre><p class="Aufgabe"><strong>Aufgabe 20
 
-Rechnen Sie um in das Bogenmaß: 
-301° 17' ; 212° 39' ; 120°.  </strong> 
+Wie groß ist a, wenn eine Parabel der Form y = ax<sup>2</sup> 
+durch den Punkt (1|4) geht?    </strong> 
 
-<button  onclick="window.open('QFunkt_Aufgabe21.html');" >Lösung</button></p></pre>
+<button  onclick="window.open('QFunkt_Aufgabe20.html');" >Lösung</button></p></pre>
 
 <!--//Aufgabe 22-->
 
-  <pre><p class ="Aufgabe" ><strong>Aufgabe 22
+  <pre><p class ="Aufgabe" ><strong>Aufgabe 21
 
-Wie groß sind c und b, 
-wenn α = 36°27' und a = 29,63 cm?     </strong>
+Wie groß ist a, wenn eine Parabel der Form y = ax² 
+durch den Punkt (-2|8) geht?      </strong>
 
-<img src="Aufgabe1.jpg" align="middle"> 
-
-b = <input type="text" id="Eintrag22" maxlength="4" size="1" style= background-color:yellow ></input> cm <button id="Pruef22" onclick="Aufgabe22()">Prüfen</button></p></pre>
+a = <input type="text" id="Eintrag21" maxlength="1" size="1" style= background-color:yellow ></input> <button id="Pruef21" onclick="Aufgabe21()">Prüfen</button></p></pre>
  
                       <script>
-                        function Aufgabe22() { 
+                        function Aufgabe21() { 
                                                 
-                          if (Eintrag22.value=="49,9") {alert("Richtig"); document.getElementById("Pruef22").disabled= true;
+                          if (Eintrag21.value=="2") {alert("Richtig"); document.getElementById("Pruef21").disabled= true;
                           }  
                            
-                          else if (Eintrag22.value!=="49,9" && Eintrag22.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag22").value="49,9"; window.open('QFunkt_Aufgabe22.html');           
-                          document.getElementById("Pruef22").disabled= true;}
+                          else if (Eintrag21.value!=="2" && Eintrag21.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag21").value="2"; window.open('QFunkt_Aufgabe21.html');           
+                          document.getElementById("Pruef21").disabled= true;}
                                
-                          else if (Eintrag22.value=="") {alert("Bitte eine Eingabe machen")}}
+                          else if (Eintrag21.value=="") {alert("Bitte eine Eingabe machen")}}
                          
                       </script> 
                       
-             <!--//Aufgabe 23--> 
+             <!--//Aufgabe 22--> 
                       
-    <pre><p class="Aufgabe"><strong>Aufgabe 23
+    <pre><p class="Aufgabe"><strong>Aufgabe 22
 
-Wie groß sind a und c, 
-wenn α = 67°38' und b = 25,42 cm?    </strong> 
+Wie groß ist a, wenn eine Parabel der Form y = ax² 
+durch den Punkt (3|-9) geht?     </strong> 
 
-<img src="Aufgabe1.jpg" align="middle"> 
+<button  onclick="window.open('QFunkt_Aufgabe22.html');" >Lösung</button></p></pre>
 
-<button  onclick="window.open('QFunkt_Aufgabe23.html');" >Lösung</button></p></pre>
+<!--//Aufgabe 23-->
 
-<!--//Aufgabe 24-->
+  <pre><p class ="Aufgabe" ><strong>Aufgabe 23
 
-  <pre><p class ="Aufgabe" ><strong>Aufgabe 24
+Eine Parabel hat ihren Scheitelpunkt in P(0|-2) 
+und geht durch Q(4|6). 
+Wie lautet ihre Funktionsgleichung?  </strong>
 
-Wie groß sind a und b, 
-wenn α = 48°12'15'' und c = 31,2 cm? </strong>
-
-<img src="Aufgabe1.jpg" align="middle"> 
-
-a = <input type="text" id="Eintrag24" maxlength="4" size="1" style= background-color:yellow ></input> cm <button id="Pruef24" onclick="Aufgabe24()">Prüfen</button></p></pre>
+y = 0,5x<sup>2</sup> - <input type="text" id="Eintrag23" maxlength="1" size="1" style= background-color:yellow ></input> cm <button id="Pruef23" onclick="Aufgabe23()">Prüfen</button></p></pre>
     
  
                       <script>
-                        function Aufgabe24() { 
+                        function Aufgabe23() { 
                                                 
-                          if (Eintrag24.value=="23,3") {alert("Richtig"); document.getElementById("Pruef24").disabled= true;
+                          if (Eintrag23.value=="2") {alert("Richtig"); document.getElementById("Pruef23").disabled= true;
                           }  
                            
-                          else if (Eintrag24.value!=="23,3" && Eintrag24.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag24").value="23,3"; window.open('QFunkt_Aufgabe24.html');           
-                          document.getElementById("Pruef24").disabled= true;}
+                          else if (Eintrag23.value!=="2" && Eintrag23.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag23").value="2"; window.open('QFunkt_Aufgabe23.html');           
+                          document.getElementById("Pruef23").disabled= true;}
                                
-                          else if (Eintrag24.value=="") {alert("Bitte eine Eingabe machen")}}
+                          else if (Eintrag23.value=="") {alert("Bitte eine Eingabe machen")}}
                          
                       </script>
 
-   <!--//Aufgabe 25--> 
+   <!--//Aufgabe 24--> 
                       
-    <pre><p class="Aufgabe"><strong>Aufgabe 25
+    <pre><p class="Aufgabe"><strong>Aufgabe 24
 
-Berechnen Sie die Fläche A des gleichschenkligen Dreiecks. </strong> 
+Eine Parabel der Form y = ax² geht durch den Punkt (0|0). 
+Liegen die Punkte P(-3|2) und Q(6|8) auf dieser Parabel? </strong> 
 
-<img src="Aufgabe25.jpg" align="middle"> 
+<button id ="einer" onclick="Schalter24('einer')">P liegt auf der Parabel, Q nicht.</button> 
+<button id ="beide" onclick="Schalter24('beide')" >P und Q liegen auf der Parabel.</button> 
+<button id ="nicht" onclick="Schalter3('nicht')">P und Q liegen nicht auf der Parabel.</button> </p></pre> 
 
-<button  onclick="window.open('QFunkt_Aufgabe25.html');" >Lösung</button></p></pre>
+<button  id = "L24" onclick="window.open('QFunkt_Aufgabe24.html');" style="display:none;">Lösung</button>
 
-<!--//Aufgabe 26-->
+<script>
+function Schalter24(buttonId) { 
+                                                
+                          if (buttonId==="beide") {alert("Richtig"); document.getElementById("beide").disabled= true;document.getElementById("einer").disabled= true;
+                          document.getElementById("nicht").disabled= true;
+                          document.getElementById("L24").style.display="inline";
+                         }                     
 
-  <pre><p class ="Aufgabe" ><strong>Aufgabe 26
+                           
+                          else if (buttonId ==="einer" || buttonId ==="nicht" ) {alert("Leider falsch. P und Q liegen auf der Parabel.");            
+                          document.getElementById("beide").disabled= true;document.getElementById("einer").disabled= true;
+                          document.getElementById("nicht").disabled= true;
+                          document.getElementById("L24").style.display="inline";}
 
-Berechnen Sie die Fläche A des regelmäßigen Neunecks. </strong>
+                             }
 
-<img src="Aufgabe26.jpg" align="middle"> 
+                          </script>
 
-A = <input type="text" id="Eintrag26" maxlength="7" size="3" style= background-color:yellow ></input> mm² <button id="Pruef26" onclick="Aufgabe26()">Prüfen</button></p></pre>
+<pre><p class = "Aufgabe" ><span style = "background-color:white;">Bestimmen Sie die Koordinaten des Scheitelpunktes S 
+und der Nullstellen N.</span></p></pre>
+
+<!--//Aufgabe 25-->
+
+  <pre><p class ="Aufgabe" ><strong>Aufgabe 25
+
+y = x<sup>2</sup> + 2x          </strong>
+
+S(-1|<input type="text" id="Eintrag25" maxlength="2" size="1" style= background-color:yellow ></input>) <button id="Pruef26" onclick="Aufgabe26()">Prüfen</button></p></pre>
      
                       <script>
                         function Aufgabe26() { 
                                                 
-                          if (Eintrag26.value=="28933,2") {alert("Richtig"); document.getElementById("Pruef26").disabled= true;
+                          if (Eintrag26.value=="-1") {alert("Richtig"); document.getElementById("Pruef26").disabled= true;
                           }  
                            
-                          else if (Eintrag26.value!=="28933,2" && Eintrag26.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag26").value="28933,2"; window.open('QFunkt_Aufgabe26.html');           
+                          else if (Eintrag26.value!=="-1" && Eintrag26.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag26").value="-1"; window.open('QFunkt_Aufgabe26.html');           
                           document.getElementById("Pruef26").disabled= true;}
                                
                           else if (Eintrag26.value=="") {alert("Bitte eine Eingabe machen")}}
