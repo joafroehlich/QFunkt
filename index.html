@@ -8,7 +8,7 @@
   <title>Quadratische Funktionen</title>
   
 </head>
-<body style="background-color: #B9D1EA;">
+<body style="background-color: white;">
 
     <style> 
         .Text1 {font-size: 1.5em;font-family: Verdana,Sans-serif; margin:0.5em; }
@@ -16,7 +16,7 @@
         .Text3 { font-size: 0.8em;background-color: white; font-family: Verdana,Sans-serif;margin:0.5em; }
         
         .Aufgabe { font-size: 0.9em;  font-family: monospace, monospace;}
-        button {background-color:white; font-family: Verdana, Sans-serif; }
+        button { font-family: Verdana, Sans-serif; }
         input {background-color:yellow; }
     </style>
 
@@ -1849,11 +1849,11 @@ y = <input type="text" id="Eintrag92" maxlength="2" size="1" style= background-c
                       <script>
                         function Aufgabe92() { 
                                                 
-                          if (Eintrag92.value=="x<sup>2</sup>") {alert("Richtig"); document.getElementById("Pruef92").disabled= true; 
+                          if (Eintrag92.value=="x²") {alert("Richtig"); document.getElementById("Pruef92").disabled= true; 
                           }  
                            
-                          else if (Eintrag92.value!=="x<sup>2</sup>" && Eintrag92.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt.");            
-                          document.getElementById("Pruef92").disabled= true; document.getElementById("Eintrag92").value="x<sup>2</sup>"; window.open('QFunkt_Aufgabe92.html');}
+                          else if (Eintrag92.value!=="x²" && Eintrag92.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt.");            
+                          document.getElementById("Pruef92").disabled= true; document.getElementById("Eintrag92").value="x²"; window.open('QFunkt_Aufgabe92.html');}
                                
                           else if (Eintrag92.value=="") {alert("Bitte eine Eingabe machen")}}
 
