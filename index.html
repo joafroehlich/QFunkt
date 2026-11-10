@@ -6,37 +6,93 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name ="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quadratische Funktionen</title>
-  
+
+<script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script> 
+
 </head>
 <body style="background-color: white;">
 
     <style> 
-        .Text1 {font-size: 1.5em;font-family: Verdana,Sans-serif; margin:0.5em; }
+         
+        .Text1 {font-size: 1.5em;font-family: Verdana,Sans-serif; margin:0.5em;}
         .Text2 { font-size: 1em; font-family: Verdana,Sans-serif;margin-top:1em;margin-left:0.5em;}
-        .Text3 { font-size: 0.8em;background-color: white; font-family: Verdana,Sans-serif;margin:0.5em; }
+        .Text3 { font-size: 0.6em; font-family: monospace,monospace;margin:0.5em; }
         
-        .Aufgabe { font-size: 0.9em;  font-family: monospace, monospace;}
-        button { font-family: Verdana, Sans-serif; }
+        body { margin: 0; font-family: Verdana,Sans-serif; font-size: 1.05rem; line-height: 1.2; background: #fff; }  
+       main { max-width: 40rem; margin: 0 auto; padding: 1rem; }
+h1 { font-size: 1.5rem; }
+h2 { font-size: 1rem; margin: 1.4rem 0 0.3rem; }
+.check input { font-size: 1.05rem; padding: 0.2rem; width: 4rem; }
+.check button { font-size: 1.05rem; padding: 0.2rem 0.6rem; } 
+.br-mobil {
+            display: none;}
+.br-desk {
+            display: block;}
+.desktop-break {
+            display: block;
+                 content: "";   
+                 height: 0.8em;  }
+.desktop-plus {
+            display: inline-block;}
+.mobile-break {
+            display: none; }            
+.mobile-plus {
+            display: none;}  
+
+@media screen and (max-width: 576px) {
+
+            .br-mobil {
+                display: block;}
+
+            .br-desk {
+                display: none;} 
+
+            .desktop-break {
+                display: none; }    
+                
+            .desktop-plus {
+                display: none; }
+
+            .mobile-break {
+                 display: block;
+                 content: "";   
+                 height: 0.8em;  }                
+                          
+            .mobile-plus {
+                 display: inline-block; }
+                           
+                }
+
         input {background-color:yellow; }
+        
     </style>
+
+    <main>
 
     <p class="Text1">Wie löse ich Matheaufgaben?</p>
 		<p class="Text1">Quadratische Funktionen</p>
     <p class="Text2" > <span style= "background-color:white;">Sie sehen eine gelbes Eingabefeld oder <br>den Schalter: Lösung.</span></p>
   	<p class="Text2"><span style= "background-color:white;">Tragen Sie Ihr Ergebnis ein, prüfen Sie es <br> oder starten Sie eine Lösung.</span></p>       
 
-       
+<div class="check">   
+
 <!--//Aufgabe 1-->
 
-  <pre><b><p class="Aufgabe">Aufgabe 1
+  <h2>Aufgabe 1</h2><p>
 
 Was stimmt für die Parabel?    
 
-y = f(x) = x<sup>2</sup>    
-<img id ="A1" src="Aufgabe1.jpg" style="display:none; padding-top:1em; padding-bottom:1em"> 
-<button id ="oben" onclick="Schalter('oben')">nach oben geöffnet</button> <button id ="unten" onclick="Schalter('unten')" >nach unten geöffnet</button> 
+y = f(x) = x<sup>2</sup></p>
 
-<button  id = "L1" onclick="window.open('QFunkt_Aufgabe1.html');" style="display:none;">Lösung</button></p></pre> 
+<img id ="A1" src="Aufgabe1.jpg" style="display:none; padding-top:1em; padding-bottom:1em"></p>
+
+<button id ="oben" onclick="Schalter('oben')">nach oben geöffnet</button></p>
+
+<button id ="unten" onclick="Schalter('unten')" >nach unten geöffnet</button></p> 
+
+<button  id = "L1" onclick="window.open('QFunkt_Aufgabe1.html');" style="display:none;">Lösung</button></p>
 
 <script>
 function Schalter(buttonId) { 
@@ -56,15 +112,23 @@ function Schalter(buttonId) {
                           </script>
 <!--//Aufgabe 2-->
 
-    <pre><p class="Aufgabe">Aufgabe 2
+    <h2>Aufgabe 2</h2><p>
 
 Was stimmt für die Parabel?      
 
-y = -x<sup>2</sup>    
-<img id ="A2" src="Aufgabe2.jpg" style="display:none; padding-top:1em; padding-bottom:1em">
-<button id ="oben2" onclick="Schalter2('oben2')">nach oben geöffnet</button> <button id ="unten2" onclick="Schalter2('unten2')" >nach unten geöffnet</button> 
-<p id="T2" class ="Aufgabe" style ="display:none">x   -2     2     S(0|0)
-y   -4   <input type="text" id="Eintrag2" maxlength="2" size="1" style= background-color:yellow ></input>          <button id="Pruef2" onclick="Aufgabe2()">Prüfen</button></p></pre> 
+y = -x<sup>2</sup></p>
+
+<img id ="A2" src="Aufgabe2.jpg" style="display:none; padding-top:1em; padding-bottom:1em"></p>
+
+<button id ="oben2" onclick="Schalter2('oben2')">nach oben geöffnet</button></p>
+
+<button id ="unten2" onclick="Schalter2('unten2')" >nach unten geöffnet</button></p> 
+
+<pre><p id="T2" style ="display:none">x   -2     2     S(0|0)
+y   -4     ?</pre>   
+
+? = <input type="text" id="Eintrag2" maxlength="2" ></input> <button id="Pruef2" onclick="Aufgabe2()">Prüfen</button></p>
+
 <script>
                         function Aufgabe2() { 
                                                 
@@ -97,21 +161,23 @@ function Schalter2(buttonId){
 
         <!--//Aufgabe 3-->                  
 
-  <pre><p class="Aufgabe">Aufgabe 3
+  <h2>Aufgabe 3</h2><p>
 
 Was stimmt für die Parabel?    
 
-y = 2x<sup>2</sup>    
-<img id ="A3" src="Aufgabe3.jpg" style="display:none; padding-top:1em; padding-bottom:1em"> 
-<button id ="ostauch" onclick="Schalter3('ostauch')">nach oben geöffnet und gestaucht</button> 
+y = 2x<sup>2</sup></p>
 
-<button id ="ustauch" onclick="Schalter3('ustauch')" >nach unten geöffnet und gestaucht</button> 
+<img id ="A3" src="Aufgabe3.jpg" style="display:none; padding-top:1em; padding-bottom:1em"></p>
 
-<button id ="ostreck" onclick="Schalter3('ostreck')">nach oben geöffnet und gestreckt</button> 
+<button id ="ostauch" onclick="Schalter3('ostauch')">nach oben geöffnet und gestaucht</button></p> 
 
-<button id ="ustreck" onclick="Schalter3('ustreck')" >nach unten geöffnet und gestreckt</button>
+<button id ="ustauch" onclick="Schalter3('ustauch')" >nach unten geöffnet und gestaucht</button></p> 
 
-<button  id = "L3" onclick="window.open('QFunkt_Aufgabe3.html');" style="display:none;">Lösung</button></p></pre> 
+<button id ="ostreck" onclick="Schalter3('ostreck')">nach oben geöffnet und gestreckt</button></p> 
+
+<button id ="ustreck" onclick="Schalter3('ustreck')" >nach unten geöffnet und gestreckt</button></p>
+
+<button  id = "L3" onclick="window.open('QFunkt_Aufgabe3.html');" style="display:none;">Lösung</button></p>
 
 <script>
 function Schalter3(buttonId) { 
@@ -134,21 +200,27 @@ function Schalter3(buttonId) {
 
 <!--//Aufgabe 4-->
 
-  <pre><p class="Aufgabe">Aufgabe 4
+  <h2>Aufgabe 4</h2><p>
 
 Was stimmt für die Parabel?    
 
-y = -2x<sup>2</sup>    
-<img id ="A4" src="Aufgabe4.jpg" style="display:none; padding-top:1em; padding-bottom:1em">
-<button id ="ostauch4" onclick="Schalter4('ostauch4')">nach oben geöffnet und gestaucht</button> 
+y = -2x<sup>2</sup></p>
 
-<button id ="ustauch4" onclick="Schalter4('ustauch4')" >nach unten geöffnet und gestaucht</button> 
+<img id ="A4" src="Aufgabe4.jpg" style="display:none; padding-top:1em; padding-bottom:1em"></p>
 
-<button id ="ostreck4" onclick="Schalter4('ostreck4')">nach oben geöffnet und gestreckt</button> 
+<button id ="ostauch4" onclick="Schalter4('ostauch4')">nach oben geöffnet und gestaucht</button></p> 
 
-<button id ="ustreck4" onclick="Schalter4('ustreck4')" >nach unten geöffnet und gestreckt</button>
-<p id="T4" class ="Aufgabe" style ="display:none">x   -1     2     S(0|<input type="text" id="Eintrag4" maxlength="1" size="1" style= background-color:yellow ></input>) <button id="Pruef4" onclick="Aufgabe4()">Prüfen</button>
-y   -2    -8</p></pre>  
+<button id ="ustauch4" onclick="Schalter4('ustauch4')" >nach unten geöffnet und gestaucht</button></p> 
+
+<button id ="ostreck4" onclick="Schalter4('ostreck4')">nach oben geöffnet und gestreckt</button></p> 
+
+<button id ="ustreck4" onclick="Schalter4('ustreck4')" >nach unten geöffnet und gestreckt</button></p>
+
+<pre><p id="T4" style ="display:none">x   -1     2     S(0|?)
+y   -2    -8
+
+? = <input type="text" id="Eintrag4" maxlength="1" ></input> <button id="Pruef4" onclick="Aufgabe4()">Prüfen</button></p></pre>
+
 <script>
                         function Aufgabe4() { 
                                                 
@@ -185,21 +257,23 @@ function Schalter4(buttonId){
                       </script>
  <!--//Aufgabe 5-->  
 
-  <pre><p class="Aufgabe">Aufgabe 5
+  <h2>Aufgabe 5</h2><p>
 
 Was stimmt für die Parabel?
 
-y = 0,5x<sup>2</sup>    
-<img id ="A5" src="Aufgabe5.jpg"  style="display:none; padding-top:1em; padding-bottom:1em"> 
-<button id ="ostauch5" onclick="Schalter5('ostauch5')">nach oben geöffnet und gestaucht</button> 
+y = 0,5x<sup>2</sup></p>
 
-<button id ="ustauch5" onclick="Schalter5('ustauch5')" >nach unten geöffnet und gestaucht</button> 
+<img id ="A5" src="Aufgabe5.jpg"  style="display:none; padding-top:1em; padding-bottom:1em"></p>
 
-<button id ="ostreck5" onclick="Schalter5('ostreck5')">nach oben geöffnet und gestreckt</button> 
+<button id ="ostauch5" onclick="Schalter5('ostauch5')">nach oben geöffnet und gestaucht</button></p> 
 
-<button id ="ustreck5" onclick="Schalter5('ustreck5')" >nach unten geöffnet und gestreckt</button>
+<button id ="ustauch5" onclick="Schalter5('ustauch5')" >nach unten geöffnet und gestaucht</button></p> 
 
-<button  id = "L5" onclick="window.open('QFunkt_Aufgabe5.html');" style="display:none;">Lösung</button></p></pre> 
+<button id ="ostreck5" onclick="Schalter5('ostreck5')">nach oben geöffnet und gestreckt</button></p> 
+
+<button id ="ustreck5" onclick="Schalter5('ustreck5')" >nach unten geöffnet und gestreckt</button></p>
+
+<button  id = "L5" onclick="window.open('QFunkt_Aufgabe5.html');" style="display:none;">Lösung</button></p>
 
 <script>
 function Schalter5(buttonId) { 
@@ -222,21 +296,26 @@ function Schalter5(buttonId) {
 
 <!--//Aufgabe 6-->
 
- <pre><p class="Aufgabe">Aufgabe 6
+ <h2>Aufgabe 6</h2><p>
 
 Was stimmt für die Parabel?  
 
-y = -0,5x<sup>2</sup>    
-<img id ="A6" src="Aufgabe6.jpg" style="display:none; padding-top:1em; padding-bottom:1em">
-<button id ="ostauch6" onclick="Schalter6('ostauch6')">nach oben geöffnet und gestaucht</button> 
+y = -0,5x<sup>2</sup></p>
 
-<button id ="ustauch6" onclick="Schalter6('ustauch6')" >nach unten geöffnet und gestaucht</button> 
+<img id ="A6" src="Aufgabe6.jpg" style="display:none; padding-top:1em; padding-bottom:1em"></p>
 
-<button id ="ostreck6" onclick="Schalter6('ostreck6')">nach oben geöffnet und gestreckt</button> 
+<button id ="ostauch6" onclick="Schalter6('ostauch6')">nach oben geöffnet und gestaucht</button></p> 
 
-<button id ="ustreck6" onclick="Schalter6('ustreck6')" >nach unten geöffnet und gestreckt</button>
-<p id="T6" class ="Aufgabe" style ="display:none">x   -4      2     S(0|0)
-y   -8   <input type="text" id="Eintrag6" maxlength="2" size="1" style= background-color:yellow ></input>        <button id="Pruef6" onclick="Aufgabe6()">Prüfen</button></p></pre>  
+<button id ="ustauch6" onclick="Schalter6('ustauch6')" >nach unten geöffnet und gestaucht</button></p> 
+
+<button id ="ostreck6" onclick="Schalter6('ostreck6')">nach oben geöffnet und gestreckt</button></p> 
+
+<button id ="ustreck6" onclick="Schalter6('ustreck6')" >nach unten geöffnet und gestreckt</button></p>
+
+<pre><p id="T6"  style ="display:none">x   -4      2     S(0|0)
+y   -8      ?  
+
+? = <input type="text" id="Eintrag6" maxlength="2" size="1" style= background-color:yellow ></input>  <button id="Pruef6" onclick="Aufgabe6()">Prüfen</button></p></pre> 
 <script>
                         function Aufgabe6() { 
                                                 
@@ -273,29 +352,27 @@ y   -8   <input type="text" id="Eintrag6" maxlength="2" size="1" style= backgrou
 
   <!--//Aufgabe 7-->   
 
-  <pre><p class="Aufgabe">Aufgabe 7
+  <h2>Aufgabe 7</h2><p>
 
-Bestimmen Sie die Koordinaten des Scheitel-
-punktes S und der Nullstellen N.    
+Bestimmen Sie die Koordinaten des Scheitelpunktes S und der Nullstellen N.</p>    
 
-y = x<sup>2</sup> + 1,5 
+y = x<sup>2</sup> + 1,5</p>
 
-<img src="Aufgabe7.jpg" > 
+<img src="Aufgabe7.jpg" ></p> 
 
-<button  onclick="window.open('QFunkt_Aufgabe7.html');" >Lösung</button></p></pre>
+<button  onclick="window.open('QFunkt_Aufgabe7.html');" >Lösung</button></p>
 
 <!--//Aufgabe 8-->
 
-  <pre><p class ="Aufgabe" >Aufgabe 8
+  <h2>Aufgabe 8</h2><p>
 
-Bestimmen Sie die Koordinaten des Scheitel-
-punktes S und der Nullstellen N.    
+Bestimmen Sie die Koordinaten des Scheitelpunktes S und der Nullstellen N.</p>    
 
-y = x<sup>2</sup> - 1,5      
+y = x<sup>2</sup> - 1,5</p>      
 
-<img src="Aufgabe8.jpg"> 
+<img src="Aufgabe8.jpg"></p> 
 
-S(0|<input type="text" id="Eintrag8" maxlength="4" size="1" style= background-color:yellow ></input>) <button id="Pruef8" onclick="Aufgabe8()">Prüfen</button></p></pre>
+S(0|<input type="text" id="Eintrag8" maxlength="4" ></input>) <button id="Pruef8" onclick="Aufgabe8()">Prüfen</button></p>
      
                       <script>
                         function Aufgabe8() { 
@@ -312,29 +389,27 @@ S(0|<input type="text" id="Eintrag8" maxlength="4" size="1" style= background-co
                       
   <!--//Aufgabe 9-->   
 
-  <pre><p class="Aufgabe">Aufgabe 9
+  <h2>Aufgabe 9</h2><p>
 
-Bestimmen Sie die Koordinaten des Scheitel-
-punktes S und der Nullstellen N.     
+Bestimmen Sie die Koordinaten des Scheitelpunktes S und der Nullstellen N.</p>     
 
-y = 2x<sup>2</sup> + 1                
+y = 2x<sup>2</sup> + 1</p>                
 
-<img src="Aufgabe9.jpg" > 
+<img src="Aufgabe9.jpg" ></p> 
 
-<button  onclick="window.open('QFunkt_Aufgabe9.html');" >Lösung</button></p></pre>
+<button  onclick="window.open('QFunkt_Aufgabe9.html');" >Lösung</button></p>
 
 <!--//Aufgabe 10-->
 
-  <pre><p class ="Aufgabe" >Aufgabe 10
+  <h2>Aufgabe 10</h2><p>
 
-Bestimmen Sie die Koordinaten des Scheitel-
-punktes S und der Nullstellen N.     
+Bestimmen Sie die Koordinaten des Scheitelpunktes S und der Nullstellen N.</p>     
 
-y = -2x<sup>2</sup> - 1               
+y = -2x<sup>2</sup> - 1</p>               
 
-<img src="Aufgabe10.jpg"> 
+<img src="Aufgabe10.jpg"></p> 
 
-S(0|<input type="text" id="Eintrag10" maxlength="2" size="1" style= background-color:yellow ></input>) <button id="Pruef10" onclick="Aufgabe10()">Prüfen</button></p></pre>
+S(0|<input type="text" id="Eintrag10" maxlength="2" size="1" style= background-color:yellow ></input>) <button id="Pruef10" onclick="Aufgabe10()">Prüfen</button></p>
  
                       <script>
                         function Aufgabe10() { 
