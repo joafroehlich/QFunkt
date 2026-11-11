@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="de"><!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name ="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flächenberechnungen</title>
+
+<script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+</head>
+<body style="background-color: white;">
+
+    <style> 
+         
+        .Text1 {font-size: 1.5em;font-family: Verdana,Sans-serif; margin:0.5em;}
+        .Text2 { font-size: 1em; font-family: Verdana,Sans-serif;margin-top:1em;margin-left:0.5em;}
+        .Text3 { font-size: 0.6em; font-family: monospace,monospace;margin:0.5em; }
+        
+        body { margin: 0; font-family: Verdana,Sans-serif; font-size: 1.05rem; line-height: 1.2; background: #fff; }  
+       main { max-width: 40rem; margin: 0 auto; padding: 1rem; }
+h1 { font-size: 1.5rem; }
+h2 { font-size: 1rem; margin: 1.4rem 0 0.3rem; }
+.check input { font-size: 1.05rem; padding: 0.2rem; width: 4rem; }
+.check button { font-size: 1.05rem; padding: 0.2rem 0.6rem; } 
+.br-mobil {
+            display: none;}
+.br-desk {
+            display: block;}
+.desktop-break {
+            display: block;
+                 content: "";   
+                 height: 0.8em;  }
+.desktop-plus {
+            display: inline-block;}
+.mobile-break {
+            display: none; }            
+.mobile-plus {
+            display: none;}  
+
+@media screen and (max-width: 576px) {
+
+            .br-mobil {
+                display: block;}
+
+            .br-desk {
+                display: none;} 
+
+            .desktop-break {
+                display: none; }    
+                
+            .desktop-plus {
+                display: none; }
+
+            .mobile-break {
+                 display: block;
+                 content: "";   
+                 height: 0.8em;  }                
+                          
+            .mobile-plus {
+                 display: inline-block; }
+                           
+                }
+
+        input {background-color:yellow; }
+        
+    </style>
+
+    <main>
+
+    <p class="Text1">Wie löse ich Matheaufgaben?</p>
+		<p class="Text1">Flächenberechnungen</p>
+    
+    <p class="Text2"><span style= "background-color:white;">Sie sehen ein gelbes Eingabefeld und die <br>Schalter: Prüfen und Lösung.</span></p>
+		<p class="Text2"><span style= "background-color:white;">Tragen Sie Ihr Ergebnis ein, prüfen Sie es <br> oder starten Sie eine Lösung.</span></p>
+     
+    <div class="check">    
+                    
+       <!--//Aufgabe 45--> 
+                      
+    <h2>Aufgabe 45</h2><p>
+
+Ein rechtwinkliges Dreieck hat eine Kathete 
+von 3 cm und eine Hypotenuse von 6 cm? 
+Wie groß ist seine Fläche?</p>  
+
+ <button  onclick="window.open('Flaeche_Aufgabe45.html');" >Lösung</button></p>
+
+<!--//Aufgabe 46-->
+
+  <h2>Aufgabe 46</h2><p>
+
+Ein gleichschenklig-rechtwinkliges Dreieck mit 
+dem Schenkel a soll die gleiche Fläche haben wie 
+ein gleichseitiges mit der Seite s. 
+Drücken Sie s durch a aus.</p>   
+
+s = <input type="text" id="Eintrag46" maxlength="3"  ></input> * a <button id="Pruef46" onclick="Aufgabe46()">Prüfen</button></p>
+    
+ 
+                      <script>
+                        function Aufgabe46() { 
+                                                
+                          if (Eintrag46.value=="1,1") {alert("Richtig"); document.getElementById("Pruef46").disabled= true;
+                          }  
+                           
+                          else if (Eintrag46.value!=="1,1" && Eintrag46.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag46").value="1,1"; window.open('Flaeche_Aufgabe46.html');           
+                          document.getElementById("Pruef46").disabled= true;}
+                               
+                          else if (Eintrag46.value=="") {alert("Bitte eine Eingabe machen")}}
+                         
+                      </script> 
+                      
+       <!--//Aufgabe 47--> 
+                      
+    <h2>Aufgabe 47</h2><p>
+
+Ein rechtwinkliges Dreieck mit der Höhe h = 3 cm 
+hat eine Fläche von <br class="br-desk">A = 12 cm². </p>
+Berechnen Sie die Seiten a, b und c des Dreiecks.   
+
+<button  onclick="window.open('Flaeche_Aufgabe47.html');" >Lösung</button></p>
+
+<!--//Aufgabe 48-->
+
+  <h2>Aufgabe 48</h2><p>
+
+Wie groß ist die Fläche eines Dreiecks 
+mit a = 3 cm, b = 5 cm und <br class="br-desk">c = 4 cm?</p>  
+
+A = <input type="text" id="Eintrag48" maxlength="1"  ></input> cm<sup>2</sup> <button id="Pruef48" onclick="Aufgabe48()">Prüfen</button></p>
+    
+ 
+                      <script>
+                        function Aufgabe48() { 
+                                                
+                          if (Eintrag48.value=="6") {alert("Richtig"); document.getElementById("Pruef48").disabled= true;
+                          }  
+                           
+                          else if (Eintrag48.value!=="6" && Eintrag48.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag48").value="6"; window.open('Flaeche_Aufgabe48.html');           
+                          document.getElementById("Pruef48").disabled= true;}
+                               
+                          else if (Eintrag48.value=="") {alert("Bitte eine Eingabe machen")}}
+                         
+                      </script>
+                      
+       <!--//Aufgabe 49--> 
+                      
+    <h2>Aufgabe 49</h2><p>
+
+In einem gleichschenkligen Dreieck ist die Höhe 
+so groß wiedie Basis und beträgt 8 cm. 
+Wie groß ist seine Fläche und ein Schenkel?</p>  
+
+<button  onclick="window.open('Flaeche_Aufgabe49.html');" >Lösung</button></p>
+
+<!--//Aufgabe 50-->
+
+  <h2>Aufgabe 50</h2><p>
+
+In einem Dreieck ist eine Seite = 5 cm, eine 
+zweite = 3 cm und die Fläche = 5 cm<sup>2</sup>. 
+Wie groß ist die dritte Seite?</p>     
+
+Größere Möglichkeit = <input type="text" id="Eintrag50" maxlength="3" ></input> cm <button id="Pruef50" onclick="Aufgabe50()">Prüfen</button></p>
+    
+ 
+                      <script>
+                        function Aufgabe50() { 
+                                                
+                          if (Eintrag50.value=="7,5") {alert("Richtig"); document.getElementById("Pruef50").disabled= true;
+                          }  
+                           
+                          else if (Eintrag50.value!=="7,5" && Eintrag50.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag50").value="7,5"; window.open('Flaeche_Aufgabe50.html');           
+                          document.getElementById("Pruef50").disabled= true;}
+                               
+                          else if (Eintrag50.value=="") {alert("Bitte eine Eingabe machen")}}
+                         
+                      </script>
+                      
+       <!--//Aufgabe 51--> 
+                      
+    <h2>Aufgabe 51</h2><p>
+
+Ein gleichschenkliges Dreieck hat eine Höhe von 
+5 cm und einen Schenkel von 8 cm. 
+Wie groß ist seine Fläche?</p>   
+
+<button  onclick="window.open('Flaeche_Aufgabe51.html');" >Lösung</button></p>
+
+<!--//Aufgabe 52-->
+
+  <h2>Aufgabe 52</h2><p>
+
+Ein gleichschenkliges Dreieck hat eine Fläche 
+von 10 cm<sup>2</sup> und eine Grundseite von 4 cm. 
+Wie groß ist die Höhe auf die Grundseite und 
+ein Schenkel?</p>    
+
+Höhe = <input type="text" id="Eintrag52" maxlength="1"  ></input> cm <button id="Pruef52" onclick="Aufgabe52()">Prüfen</button></p>
+    
+ 
+                      <script>
+                        function Aufgabe52() { 
+                                                
+                          if (Eintrag52.value=="5") {alert("Richtig"); document.getElementById("Pruef52").disabled= true;
+                          }  
+                           
+                          else if (Eintrag52.value!=="5" && Eintrag52.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag52").value="5"; window.open('Flaeche_Aufgabe52.html');           
+                          document.getElementById("Pruef52").disabled= true;}
+                               
+                          else if (Eintrag52.value=="") {alert("Bitte eine Eingabe machen")}}
+                         
+                      </script> 
+                      
+       <!--//Aufgabe 53--> 
+                      
+    <h2>Aufgabe 53</h2><p>
+
+Schenkel und Grundseite eines gleichschenkligen 
+Dreiecks verhalten sich wie 2 : 1. Es hat eine 
+Fläche von 6 cm². 
+Wie groß ist ein Schenkel und die Grundseite?</p>   
+
+<button  onclick="window.open('Flaeche_Aufgabe53.html');" >Lösung</button></p>
+
+<!--//Aufgabe 54-->
+
+  <h2>Aufgabe 54</h2><p>
+
+Ein gleichschenkliges Dreieck hat eine Fläche 
+von 8 cm<sup>2</sup> und einen Schenkel von 5 cm. 
+Wie groß ist sein Inkreisradius?</p>   
+
+Kleinerer = <input type="text" id="Eintrag54" maxlength="3"  ></input> cm <button id="Pruef54" onclick="Aufgabe54()">Prüfen</button></p>
+    
+ 
+                      <script>
+                        function Aufgabe54() { 
+                                                
+                          if (Eintrag54.value=="0,8") {alert("Richtig"); document.getElementById("Pruef54").disabled= true;
+                          }  
+                           
+                          else if (Eintrag54.value!=="0,8" && Eintrag54.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag54").value="0,8"; window.open('Flaeche_Aufgabe54.html');           
+                          document.getElementById("Pruef54").disabled= true;}
+                               
+                          else if (Eintrag54.value=="") {alert("Bitte eine Eingabe machen")}}
+                         
+                      </script> 
+                      
+       <!--//Aufgabe 55--> 
+                      
+    <h2>Aufgabe 55</h2><p>
+
+Ein gleichschenkliges Dreieck hat einen Umfang 
+von 16 cm und eine Höhe auf die Grundseite 
+von 4 cm. 
+Wie groß sind die Fläche, die Länge eines 
+Schenkels und die Grundseite?</p>    
+
+<button  onclick="window.open('Flaeche_Aufgabe55.html');" >Lösung</button></p>
+
+<!--//Aufgabe 56-->
+
+  <h2>Aufgabe 56</h2><p>
+
+Wie groß sind für das gleichschenklige Dreieck 
+der Schenkel a und die Strecke f?</p>  
+
+<img src="Aufgabe56.jpg" ></p> 
+
+a = <input type="text" id="Eintrag56" maxlength="3" ></input> cm <button id="Pruef56" onclick="Aufgabe56()">Prüfen</button></p>
+    
+ 
+                      <script>
+                        function Aufgabe56() { 
+                                                
+                          if (Eintrag56.value=="5,4") {alert("Richtig"); document.getElementById("Pruef56").disabled= true;
+                          }  
+                           
+                          else if (Eintrag56.value!=="5,4" && Eintrag56.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag56").value="5,4"; window.open('Flaeche_Aufgabe56.html');           
+                          document.getElementById("Pruef56").disabled= true;}
+                               
+                          else if (Eintrag56.value=="") {alert("Bitte eine Eingabe machen")}}
+                         
+                      </script>
+
+ <!--//Aufgabe 57-->                     
+                      
+    <h2>Aufgabe 57</h2><p>
+
+Ein gleichschenkliges Dreieck hat eine Grundseite 
+von 5 cm und Schenkel von 8,3 cm. 
+Wie lang ist die Seitenhalbierende eines 
+Schenkels?</p>   
+
+<button  onclick="window.open('Flaeche_Aufgabe57.html');" >Lösung</button></p>
+
+<!--//Aufgabe 58-->
+
+  <h2>Aufgabe 58</h2><p>
+
+In welchem Verhältnis teilt die Seitenhalbierende 
+eines Schenkels in einem gleichschenkligen Dreieck 
+die entstehenden Flächen?</p>  
+
+<img src="Aufgabe58.jpg" ></p> 
+
+A<sub>1</sub> : A<sub>2</sub> = <input type="text" id="Eintrag58" maxlength="1" size="1" style= background-color:yellow ></input> <button id="Pruef58" onclick="Aufgabe58()">Prüfen</button></p>
+    
+ 
+                      <script>
+                        function Aufgabe58() { 
+                                                
+                          if (Eintrag58.value=="1") {alert("Richtig"); document.getElementById("Pruef58").disabled= true;
+                          }  
+                           
+                          else if (Eintrag58.value!=="1" && Eintrag58.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag58").value="1"; window.open('Flaeche_Aufgabe58.html');           
+                          document.getElementById("Pruef58").disabled= true;}
+                               
+                          else if (Eintrag58.value=="") {alert("Bitte eine Eingabe machen")}}
+                         
+                      </script>
+                      
+<!--//Aufgabe 59-->                     
+                      
+    <h2>Aufgabe 59</h2><p>
+
+Berechnen Sie b und c.</p>   
+
+<img src="Aufgabe59.jpg" ></p> 
+
+<button  onclick="window.open('Flaeche_Aufgabe59.html');" >Lösung</button></p>
+
+<!--//Aufgabe 60-->
+
+  <h2>Aufgabe 60</h2><p>
+
+Wie groß ist die Fläche des Profils?</p>   
+
+<img src="Aufgabe60.jpg" ></p> 
+
+A = <input type="text" id="Eintrag60" maxlength="6" ></input> mm<sup>2</sup> <button id="Pruef60" onclick="Aufgabe60()">Prüfen</button></p></pre> 
+    
+ 
+                      <script>
+                        function Aufgabe60() { 
+                                                
+                          if (Eintrag60.value=="2493,4") {alert("Richtig"); document.getElementById("Pruef60").disabled= true;
+                          }  
+                           
+                          else if (Eintrag60.value!=="2493,4" && Eintrag60.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag60").value="2493,4"; window.open('Flaeche_Aufgabe60.html');           
+                          document.getElementById("Pruef60").disabled= true;}
+                               
+                          else if (Eintrag60.value=="") {alert("Bitte eine Eingabe machen")}}
+                         
+                      </script> 
+                      
+<!--//Aufgabe 61-->                     
+                      
+    <h2>Aufgabe 61</h2><p>
+
+Die Seite eines gleichseitigen Dreiecks ist 3 cm.
+Wie groß sind der Inkreis- und Umkreisradius?</p>   
+
+<img src="Aufgabe61.jpg" ></p> 
+
+<button  onclick="window.open('Flaeche_Aufgabe61.html');" >Lösung</button></p>
+
+<!--//Aufgabe 62-->
+
+  <h2>Aufgabe 62</h2><p>
+
+Berechnen Sie den Ankreisradius des gleich-
+seitigen Dreiecks,wenn eine Dreieckseite 4 cm 
+lang ist.</p>    
+
+<img src="Aufgabe62.jpg" ></p> 
+
+r<sub>a</sub> = <input type="text" id="Eintrag62" maxlength="3"  ></input> cm <button id="Pruef62" onclick="Aufgabe62()">Prüfen</button></p> 
+    
+ 
+                      <script>
+                        function Aufgabe62() { 
+                                                
+                          if (Eintrag62.value=="3.5") {alert("Richtig"); document.getElementById("Pruef62").disabled= true;
+                          }  
+                           
+                          else if (Eintrag62.value!=="3,5" && Eintrag62.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag62").value="3,5"; window.open('Flaeche_Aufgabe62.html');           
+                          document.getElementById("Pruef62").disabled= true;}
+                               
+                          else if (Eintrag62.value=="") {alert("Bitte eine Eingabe machen")}}
+                         
+                      </script> 
+                      
+<!--//Aufgabe 63-->                     
+                      
+    <h2>Aufgabe 63</h2><p>
+
+Die Seiten zweier gleichseitiger Dreiecke 
+verhalten sich wie  2 : 3. 
+Wie verhalten sich die Flächen?</p>    
+
+<button  onclick="window.open('Flaeche_Aufgabe63.html');" >Lösung</button></p>
+
+<!--//Aufgabe 64-->
+
+  <h2>Aufgabe 64</h2><p>
+
+Ein gleichseitiges Dreieck hat einen Umfang 
+von 15 cm. 
+Wie groß sind seine Höhe und die Fläche?</p>   
+
+A = <input type="text" id="Eintrag64" maxlength="4" ></input> cm² <button id="Pruef64" onclick="Aufgabe64()">Prüfen</button></p>
+    
+ 
+                      <script>
+                        function Aufgabe64() { 
+                                                
+                          if (Eintrag64.value=="10,8(") {alert("Richtig"); document.getElementById("Pruef64").disabled= true;
+                          }  
+                           
+                          else if (Eintrag64.value!=="10,8" && Eintrag64.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag64").value="10,8"; window.open('Flaeche_Aufgabe64.html');           
+                          document.getElementById("Pruef64").disabled= true;}
+                               
+                          else if (Eintrag64.value=="") {alert("Bitte eine Eingabe machen")}}
+                         
+                      </script> 
+                      
+<!--//Aufgabe 65-->                     
+                      
+    <h2>Aufgabe 65</h2><p>
+
+Der Umfang eines Stahlprofils in Form eines 
+gleichseitigen Dreiecks beträgt 26,4 cm. 
+Wie groß ist seine Fläche?</p>   
+
+<button  onclick="window.open('Flaeche_Aufgabe65.html');" >Lösung</button></p>
+
+<!--//Aufgabe 66-->
+
+  <h2>Aufgabe 66</h2><p>
+
+Eine Sechskantschraube hat eine Schlüsselweite 
+von 21 mm. 
+Wie groß ist ihr Eckmaß e?</p>        
+
+<img src="Aufgabe66.jpg" ></p> 
+
+e = <input type="text" id="Eintrag66" maxlength="4"  ></input> mm <button id="Pruef66" onclick="Aufgabe66()">Prüfen</button></p>
+    
+ 
+                      <script>
+                        function Aufgabe66() { 
+                                                
+                          if (Eintrag66.value=="24,2") {alert("Richtig"); document.getElementById("Pruef66").disabled= true;
+                          }  
+                           
+                          else if (Eintrag66.value!=="24,2" && Eintrag66.value!=="") {alert("Leider falsch. Die Lösung wird angezeigt."); document.getElementById("Eintrag66").value="24,2"; window.open('Flaeche_Aufgabe66.html');           
+                          document.getElementById("Pruef66").disabled= true;}
+                               
+                          else if (Eintrag66.value=="") {alert("Bitte eine Eingabe machen")}}
+                         
+                      </script> 
+                      
+<!--//Aufgabe 67-->                     
+                      
+    <h2>Aufgabe 67</h2><p>
+
+Ein Mast ist 23,4 m hoch. 
+Er wird von 3 Seilen mit einer Länge von 30 m 
+gehalten. Deren Fußpunkte bilden ein 
+gleichseitiges Dreieck. 
+Wie weit sind die Fußpunkte voneinander entfernt?</p>    
+
+<button  onclick="window.open('Flaeche_Aufgabe67.html');" >Lösung</button></p>
+
+
+
+                
+          <a href= "index.html" ><p class="Text2" > <span style= >zurück</span></p></a></div></main>     
+	        
+          
+        <script>
+            document.body.addEventListener("input", function(inputEvent) {
+              const eingabeFeld = inputEvent.target;
+              if (eingabeFeld.maxLength > 0 && eingabeFeld.value.length > eingabeFeld.maxLength) {
+                eingabeFeld.value = eingabeFeld.value.substr(0, eingabeFeld.maxLength);
+              }
+            })
+          </script>
+        
+         
+
+        </body></html>
+
+                      
+                    
